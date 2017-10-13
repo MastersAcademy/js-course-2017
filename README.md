@@ -86,7 +86,7 @@ Projects for teams(це загальні теми, вони будуть уто�
  * Yana Tsylinska (https://github.com/yana-tsulya)
 
 
-# [Hometasks](https://github.com/MastersAcademy/js-course/issues/)
+# [Hometasks](https://github.com/MastersAcademy/js-course-2017/issues/)
 
 
 # Useful links
