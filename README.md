@@ -40,14 +40,8 @@ Terms and conditions
 Project structure
 ----------------------
  * <b>homeworks</b> - Папка із результатами виконання домашніх завдань. В цій папці у кожного відвідувача має
-  бути створена своя папка, із результатами. папка має бути створена за допомогою засилання в цей
-  проект pull request не пізніше 06.11.2016. Ім'я папки має бути створене за шаблоном типу <b>name.surname_githubUsername</b>.
-
-
-# Authors
- * Aleksandr Fesenko (https://github.com/smithua)
- * Oleh Kastornov (https://github.com/powerbot15)
- * Yana Tsylinska (https://github.com/yana-tsulya)
+  бути створена своя папка, із результатами. Папка має бути створена за допомогою засилання в цей
+  проект pull request. Ім'я папки має бути створене за шаблоном типу <b>name.surname_githubusername</b>.
 
 
 # [Hometasks](https://github.com/MastersAcademy/js-course-2017/issues/)
@@ -56,3 +50,9 @@ Project structure
 # Useful links
  * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "Markdown Cheatsheet")
  * [Try GitHub](https://try.github.io)
+
+
+# Authors
+ * Aleksandr Fesenko (https://github.com/smithua)
+ * Oleh Kastornov (https://github.com/powerbot15)
+ * Yana Tsylinska (https://github.com/yana-tsulya)
