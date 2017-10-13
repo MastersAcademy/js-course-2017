@@ -10,35 +10,9 @@ Masters Academy JavaScript courses project for season 2017/2018
 
 1. Основы GitHub/GIT. Инструменты для фронтенд разработки.
 
-## Введение в JavaScript.
-
-1. Синтаксис языка. Объявление переменных, массивы, объекты и функции. Условные операторы. Циклы и итераторы.
-   [**Домашняя работа**](https://github.com/MastersAcademy/js-course/tree/master/lectures/lecture1/homework)
-   Вспомогательные материалы : [Best practices, style guides, patterns, libraries and more](http://jstherightway.org/)
-   
-    
-2. Контекст выполнения, замыкания, рекурсия и функции высшего порядка.
-
-## Работа с [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model), [jQuery](https://jquery.com/).
-
-1. Основы HTML5, CSS3
-
-2. DOM. Работа с HTML-элементами через объект document. jQuery для работы с DOM. 
-
-3. Шаблоны проектирования
-   Вспомогательные материалы : [Javascript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
-   [Пример](https://github.com/MastersAcademy/js-course/tree/master/lectures/lecture5/theory)
-   [Еще один](https://github.com/powerbot15/demo-modules)
-   
-4. Обмен данными с сервером, `AJAX`. 
-
-## Введение в [TypeScript](https://www.typescriptlang.org/). [Angular 2](https://angular.io/).
-
-1. Обзор TypeScript + ES6
-
 Terms and conditions
 --------------------
- * Цей документ визначає та декларує чим є курси з JavaScript які проводить Masters Academy в 2016-2017 рр.
+ * Цей документ визначає та декларує чим є курси з JavaScript які проводить Masters Academy в 2017-2018 рр.
  * Курси проводяться Masters Academy, на безоплатній добровільній основі.
  * Метою проведення курсів є допомога зацікавленим особам у вивченні основ frontend розробки та мови програмування JavaScript.
  * Курси є добровільною освітньою ініціативою, метою якої є донесення корисної інформації у зручний для обох сторін спосіб, із орієнтацією на самомотивованість відвідувачів, обопільну цікавість процессу та взаємне збагачення та обмін досвідом.
