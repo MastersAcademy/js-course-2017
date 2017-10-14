@@ -1,1 +1,2 @@
-node v8.6.0 npm 5.4.2
+version node: v8.7.0
+version npm: 5.4.2
