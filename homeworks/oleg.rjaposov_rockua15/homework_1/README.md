@@ -1,1 +1,2 @@
-
+node -v       
+npm --version 
