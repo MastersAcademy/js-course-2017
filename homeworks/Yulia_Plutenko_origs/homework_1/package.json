@@ -1,0 +1,29 @@
+{
+   
+	"name": "homework_1",
+  
+	"version": "1.0.0",
+  
+	"description": "npm 5.4.2\r node v8.7.0",
+  
+	"main": "index.js",
+  "scripts": {
+    
+		"test": "echo \"Error: no test specified\" && exit 1"
+  
+	},
+  "repository": {
+    
+		"type": "git",
+    
+		"url": "\u0016https://github.com/origs/js-course-2017.git"
+  
+	},
+  "keywords": [
+    "!540875"
+  ],
+  
+	"author": "Yulia Plutenko",
+  
+	"license": "ISC"
+}
