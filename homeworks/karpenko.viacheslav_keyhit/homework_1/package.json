@@ -1,0 +1,23 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "First package",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keyhit/js-course-2017.git"
+  },
+  "keywords": [
+    "First",
+    "package"
+  ],
+  "author": "Viacheslav Karpenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keyhit/js-course-2017/issues"
+  },
+  "homepage": "https://github.com/keyhit/js-course-2017#readme"
+}
