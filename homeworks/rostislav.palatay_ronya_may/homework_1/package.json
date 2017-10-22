@@ -1,0 +1,19 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "node -v\r 8.7.0 Current",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ronya-may/js-course-2017.git"
+  },
+  "author": "ronya_may",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronya-may/js-course-2017/issues"
+  },
+  "homepage": "https://github.com/ronya-may/js-course-2017#readme"
+}

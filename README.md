@@ -8,7 +8,7 @@ Masters Academy JavaScript courses project for season 2017/2018
 
 ## Intro.
 
-1. Основы GitHub/GIT. Инструменты для фронтенд разработки.
+1. Основи GitHub/GIT. Інструмети для javascript розробки.
 
 Terms and conditions
 --------------------
