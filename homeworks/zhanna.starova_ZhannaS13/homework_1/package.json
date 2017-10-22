@@ -1,0 +1,24 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "first homework js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhannaS13/js-course-2017.git"
+  },
+  "keywords": [
+    "masteracademy",
+    "git",
+    "homework"
+  ],
+  "author": "zhanna starova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZhannaS13/js-course-2017/issues"
+  },
+  "homepage": "https://github.com/ZhannaS13/js-course-2017#readme"
+}
