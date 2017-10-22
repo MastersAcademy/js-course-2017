@@ -1,0 +1,18 @@
+{
+  "name": "hw1",
+  "version": "1.0.0",
+  "description": "node v8.7.0, npm v5.4.2",
+  "main": "1",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "alex-Lytvynenko"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Alex Lytvynenko",
+  "license": "ISC"
+}
