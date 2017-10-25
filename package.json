@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "precommit": "lint-staged",
-    "test": "test"
+    "test": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
