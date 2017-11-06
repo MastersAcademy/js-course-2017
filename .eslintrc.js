@@ -33,7 +33,6 @@ module.exports = {
         'no-self-compare': 'error',
         'no-use-before-define': 'error',
         'no-unneeded-ternary': 'error',
-
         'no-console' : 'off'
     }
 };
