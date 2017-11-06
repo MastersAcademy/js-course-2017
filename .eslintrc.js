@@ -32,6 +32,7 @@ module.exports = {
         'no-loop-func': 'error',
         'no-self-compare': 'error',
         'no-use-before-define': 'error',
-        'no-unneeded-ternary': 'error'
+        'no-unneeded-ternary': 'error',
+        'no-console' : 'off'
     }
 };
