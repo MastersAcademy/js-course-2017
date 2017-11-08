@@ -1,12 +1,12 @@
 const HEIGHT = 4;
 var line = '  ';
 var alignmentCounter = HEIGHT - 1;
-var brick = '#';
+const BRICK = '#';
 // eslint-disable-next-line no-console
 console.log('Height : ' + HEIGHT);
 
 for (let i = 0; i < HEIGHT; i++) {
-    line = brick + line + brick;
+    line = BRICK + line + BRICK;
     let lineLining = line;
     let items = alignmentCounter;
 
