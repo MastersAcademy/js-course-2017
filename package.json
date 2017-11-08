@@ -1,12 +1,11 @@
 {
   "name": "js-course-2017",
   "version": "1.0.0",
-  "description": "Masters Academy JavaScript courses project for season 2017/2018 ----------------------------------------------------------------------- [![Join the chat at https://gitter.im/Masters-Academy/js-course-2017](https://badges.gitter.im/ZhuChara2004/MA-Summer-Practice-2016.svg)](https://gitter.im/Masters-Academy/js-course-2017?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)",
+  "description": "add some magic for JavaScript course 2017",
   "main": "index.js",
   "scripts": {
     "precommit": "lint-staged",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "lint-staged"
+    "test": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
@@ -20,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olga-tsarenko/js-course-2017.git"
+    "url": "git+https://github.com/MastersAcademy/js-course-2017.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "smithua <aleksandr.fesenko@masterofcode.com>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/olga-tsarenko/js-course-2017/issues"
+    "url": "https://github.com/MastersAcademy/js-course-2017/issues"
   },
-  "homepage": "https://github.com/olga-tsarenko/js-course-2017#readme",
+  "homepage": "https://github.com/MastersAcademy/js-course-2017#readme",
   "dependencies": {
     "eslint": "^4.9.0",
     "husky": "^0.14.3",
