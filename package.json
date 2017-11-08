@@ -1,0 +1,37 @@
+{
+  "name": "js-course-2017",
+  "version": "1.0.0",
+  "description": "Masters Academy JavaScript courses project for season 2017/2018 ----------------------------------------------------------------------- [![Join the chat at https://gitter.im/Masters-Academy/js-course-2017](https://badges.gitter.im/ZhuChara2004/MA-Summer-Practice-2016.svg)](https://gitter.im/Masters-Academy/js-course-2017?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --config .eslintrc.js",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --config .stylelintrc",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olga-tsarenko/js-course-2017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olga-tsarenko/js-course-2017/issues"
+  },
+  "homepage": "https://github.com/olga-tsarenko/js-course-2017#readme",
+  "dependencies": {
+    "eslint": "^4.9.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "stylelint": "^8.2.0"
+  }
+}
