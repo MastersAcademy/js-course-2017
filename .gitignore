@@ -59,3 +59,5 @@ typings/
 .idea
 
 
+#IDE config
+.idea
