@@ -1,9 +1,12 @@
-((height = 4) => {
+(() => {
     const SYMBOL = '#';
     const SPACE = '  ';
+    const HEIGHT = 4;
 
-    if (height >= 2) {
-        for (let i = 1; i <= height; i++) {
+    console.log('HEIGHT: ' + HEIGHT + '\n');
+
+    if (HEIGHT >= 2) {
+        for (let i = 1; i <= HEIGHT; i++) {
             let bricks = '';
 
             while (bricks.length < i) {
@@ -12,7 +15,7 @@
 
             let spaces = '';
 
-            while (spaces.length < height - bricks.length) {
+            while (spaces.length < HEIGHT - bricks.length) {
                 spaces += ' ';
             }
 
