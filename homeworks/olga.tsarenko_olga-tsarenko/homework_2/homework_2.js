@@ -1,4 +1,4 @@
-const height = 25;
+const height = 4;
 if (height >=2 && height <= 24) {
     const block = '#';
     const space = ' ';
