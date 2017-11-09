@@ -1,0 +1,15 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "homework_1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GavukaAlexandr/js-course-2017/tree/master/homeworks/alexandr.gavuka_GavukaAlexandr/homework_1"
+  },
+  "author": "AlexandrGavuka",
+  "license": "ISC"
+}
