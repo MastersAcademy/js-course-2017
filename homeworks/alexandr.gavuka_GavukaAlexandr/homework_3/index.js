@@ -12,7 +12,7 @@
 
             let spaces = '';
 
-            while (spaces.length <= height - bricks.length) {
+            while (spaces.length < height - bricks.length) {
                 spaces += ' ';
             }
 
