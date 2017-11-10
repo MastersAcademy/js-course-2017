@@ -1,20 +1,17 @@
 function printPyramid (height) {
 		var str = '',
-			str1 = '',
-			spcs = '',
+			spc = ' ',
+			spcs,
 			pyramidLvl;
-	if (height<2) {
+	if (height < 2) {
 		console.log('need at least 2');
-	}else if ((typeof height) !== 'number') {
+	}else if ( (typeof height) !== 'number') {
 		console.log('need a number');
 	}else {
 		for (let i = 1; i <= height ; i++) {
-			str1 += '#';
-			for (let j = 0; j < (height - str1.length); j++ ) {
-
-				str = '1' + str1;
-			}
-			pyramidLvl = str + "  " + str1;
+			str += '#';
+			spcs = spc.repeat(height-i);
+			pyramidLvl = spcs + str + "  " + str;
 			console.log(pyramidLvl);
 		}
 	}
