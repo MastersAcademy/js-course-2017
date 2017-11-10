@@ -7,9 +7,9 @@ function printPyramid (height) {
         console.log('need a number');
     } else {
         for (let i = 1; i <= height ; i++) {
-            str = char.repeat(i);
-            let spcs = spc.repeat(height-i),
-                pyramidLvl = spcs + str + '  ' + str;
+            let str = char.repeat(i),
+                indents = spc.repeat(height-i),
+                pyramidLvl = indents + str + '  ' + str;
             console.log(pyramidLvl);
         }
     }
