@@ -20,4 +20,4 @@ for (let j = 1; j <= n; j++) {
 	}
 	step += 2;
 }
-console.log(str);
+console.log(str); 
