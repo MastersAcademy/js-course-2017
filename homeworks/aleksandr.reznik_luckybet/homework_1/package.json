@@ -1,0 +1,11 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "node -v: v6.11.4\r npm --version:\r { npm: '5.5.1',\r   ares: '1.10.1-DEV'\r   http_parser: '2.7.\r   icu: '58.2',\r   modules: '48',\r   node: '6.11.4',\r   openssl: '1.0.2l',\r   uv: '1.11.0',\r   v8: '5.1.281.108',\r   zlib: '1.2.11' }",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
