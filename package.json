@@ -1,0 +1,36 @@
+{
+  "name": "js-course-2017",
+  "version": "1.0.0",
+  "description": "add some magic for JavaScript course 2017",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "test": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --config .eslintrc.js",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --config .stylelintrc",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MastersAcademy/js-course-2017.git"
+  },
+  "author": "smithua <aleksandr.fesenko@masterofcode.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MastersAcademy/js-course-2017/issues"
+  },
+  "homepage": "https://github.com/MastersAcademy/js-course-2017#readme",
+  "dependencies": {
+    "eslint": "^4.9.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "stylelint": "^8.2.0"
+  }
+}
