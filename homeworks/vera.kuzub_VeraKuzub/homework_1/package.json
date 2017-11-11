@@ -1,0 +1,25 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "this is the homework_1 for MastersAcademy js course 2017",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeraKuzub/js-course-2017.git"
+  },
+  "keywords": [
+    "homework",
+    "js",
+    "course",
+    "MastersAcademy"
+  ],
+  "author": "Vera Kuzub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VeraKuzub/js-course-2017/issues"
+  },
+  "homepage": "https://github.com/VeraKuzub/js-course-2017#readme"
+}

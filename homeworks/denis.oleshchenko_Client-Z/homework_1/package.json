@@ -1,0 +1,13 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "first task",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "runtests"
+  },
+  "author": "Denis",
+  "license": "ISC"
+}
