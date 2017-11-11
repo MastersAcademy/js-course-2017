@@ -26,6 +26,6 @@ function marioProblem(height) {
                 
                     console.log(rowStr + "  " + rowStr2);
                 }  
-            }  
+                }  
 }
 
