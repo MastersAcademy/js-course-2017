@@ -1,7 +1,7 @@
-var a = "#";
-var s = " ";
-var h = 4;
+let a = "#";
+let s = " ";
+let h = 4;
 
-for (var i = 1; i < h + 1; i++){
+for (let i = 1; i < h + 1; i++){
     console.log(s.repeat(h - i) + a.repeat(i) + "  " + a.repeat(i));
 }
