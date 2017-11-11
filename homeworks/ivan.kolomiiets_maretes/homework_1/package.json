@@ -1,0 +1,15 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "node -v\r v6.11.4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maretes/js-course-2017/tree/master/homeworks/ivan.kolomiiets_maretes/homework_1"
+  },
+  "author": "Ivan Kolomiiets",
+  "license": "ISC"
+}
