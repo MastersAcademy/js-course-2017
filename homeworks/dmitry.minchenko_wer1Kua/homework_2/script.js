@@ -1,9 +1,9 @@
 (function() {
-    let height = 13,
+    let height = 15,
         block = '#',
         space = ' ';
 
-    if (height<2 && height>12) {
+    if (height<2 || height>12) {
         return console.log('Error! Height must be >= 2 and <= 12');
     }
 
