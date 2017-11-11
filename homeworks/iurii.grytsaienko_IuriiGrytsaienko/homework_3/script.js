@@ -1,7 +1,9 @@
 const HEIGHT = 4;
-const SEPARATOR = "  ";
 
 console.log("Height: " + HEIGHT);
+
+if (HEIGHT < 2 )
+    throw "pyramide is to small"
 
 for (let i = 0; i < HEIGHT; i++) {
     let space = "";
