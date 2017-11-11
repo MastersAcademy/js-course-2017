@@ -1,13 +1,13 @@
 (function() {
-    let height = 15,
-        block = '#',
-        space = ' ';
+    const HEIGHT = 15,
+        BLOCK = '#',
+        SPACE = ' ';
 
-    if (height<2 || height>12) {
+    if (HEIGHT<2 || HEIGHT>12) {
         return console.log('Error! Height must be >= 2 and <= 12');
     }
 
-    for (let i = 0; i < height; i++) {
-        console.log(space.repeat(height-i) + block.repeat(i+1) + space.repeat(2) + block.repeat(1+i));
+    for (let i = 0; i < HEIGHT; i++) {
+        console.log(SPACE.repeat(HEIGHT-i) + BLOCK.repeat(i+1) + SPACE.repeat(2) + BLOCK.repeat(1+i));
     }
 })();
