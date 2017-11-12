@@ -1,10 +1,20 @@
-function generatePyramids (height = 4) {
-    let arrFirstPyramid = [],
-        arrSecondPyramid=generatePyramid(height);
+function generatePyramids(height = 4) {
 
-    if (height < 2){
-        height = 2;
+    if (height < 2) {
+        return;
     }
+
+    let arrFirstPyramid = generateFirstPyramid(height),
+        arrSecondPyramid = generateSecondPyramid(height);
+
+
+    for (let i = 0; i < height; i++) {
+        console.log(arrFirstPyramid[i] + "  " + arrSecondPyramid[i]);
+    }
+}
+
+function generateFirstPyramid(height) {
+    let arr = [];
 
     for (let i = 0; i < height; i++) {
         let block = '';
@@ -17,15 +27,13 @@ function generatePyramids (height = 4) {
             block += '*';
         }
 
-        arrFirstPyramid[i] = block;
+        arr[i] = block;
     }
 
-    for (let i = 0; i<height; i++) {
-        console.log(arrFirstPyramid[i] + "  " + arrSecondPyramid[i]);
-    }
+    return arr;
 }
 
-function generatePyramid (height) {
+function generateSecondPyramid(height) {
     let arr = [];
 
     for (let i = 0; i < height; i++) {
@@ -40,4 +48,4 @@ function generatePyramid (height) {
     return arr;
 }
 
-generatePyramids(5);
+generatePyramids(4);
