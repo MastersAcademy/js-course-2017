@@ -1,6 +1,6 @@
 let h = 10; //change rows
-let p = "#";
-let s = "  ";
+const p = "#";
+const s = "  ";
 console.log("Height: " + h);
 for (let i = 0; i < h; i++) {
     let space = h - i - 1;
