@@ -1,7 +1,7 @@
-// Initial state
+// Default state
 let state = {
     height: 4,
-    spaces: 2,
+    spacesAmount: 2,
     symbol: '#',
 }
 
@@ -13,7 +13,7 @@ process.argv.forEach(arg => {
         case 'height':
             return state.height = parseInt(arg[1], 10);
         case 'spaces':
-            return state.spaces = parseInt(arg[1], 10);
+            return state.spacesAmount = parseInt(arg[1], 10);
         case 'symbol':
             return state.symbol = arg[1];
     }
@@ -33,10 +33,10 @@ const piramidPrints = state => {
 }
 
 // Creates spaces between pyramids
-function spacesCreate(spaces) {
+function spacesCreate(amount) {
     let space = '';
 
-    for (let i = 0; i < spaces; i++) {
+    for (let i = 0; i < amount; i++) {
         space += ' ';
     }
 
@@ -45,7 +45,7 @@ function spacesCreate(spaces) {
 
 // Creates a line of characters
 function lineCreate(i, state) {
-    const { height, spaces, symbol } = state;
+    const { height, spacesAmount, symbol } = state;
     let str = '';
 
     for (let j = 1; j <= height*2; j++) {
@@ -58,10 +58,10 @@ function lineCreate(i, state) {
 
     // Receiving the slice of the left half lines
     let leftString = str.slice(0,height),
-    // Receiving the slice of the left half lines
+    // Receiving the slice of the right half lines
         rightString = str.slice(height),
     // Receiving the number of spaces
-        numberOfSpaces = spacesCreate(spaces);
+        numberOfSpaces = spacesCreate(spacesAmount);
     // Combining in a single line
     return str = `${leftString}${numberOfSpaces}${rightString}`;
 }
