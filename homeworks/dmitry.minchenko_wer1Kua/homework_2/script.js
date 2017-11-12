@@ -4,7 +4,8 @@
         SPACE = ' ';
 
     if (HEIGHT<2 || HEIGHT>12) {
-        return console.log('Error! Height must be >= 2 and <= 12');
+        console.log('Error! Height must be >= 2 and <= 12');
+        return;
     }
 
     for (let i = 0; i < HEIGHT; i++) {
