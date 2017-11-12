@@ -1,7 +1,7 @@
-function repeat(item, sumbol = ' ') {
+function repeat(item, symbol = ' ') {
     let res = '';
     for(let i = 1; i <= item; i++) {
-        res += sumbol;
+        res += symbol;
     }
     return res;
 }
