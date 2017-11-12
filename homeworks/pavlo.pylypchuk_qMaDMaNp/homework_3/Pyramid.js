@@ -1,8 +1,7 @@
-const BLOCK = "#";
-const SPACE = " ";
 let rl = require('readline');
 let prompts = rl.createInterface(process.stdin, process.stdout);
-
+const BLOCK = "#";
+const SPACE = " ";
 
 prompts.question("What`s the height?", function(tower_h) {
 	let height = tower_h;              	
