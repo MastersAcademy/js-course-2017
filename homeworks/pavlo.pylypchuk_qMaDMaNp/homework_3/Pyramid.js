@@ -1,13 +1,20 @@
-var block = "#";
-var space = " ";
-var promptEnter = prompt("What`s the height?");
-var height = promptEnter;
+const BLOCK = "#";
+const SPACE = " ";
+let rl = require('readline');
+let prompts = rl.createInterface(process.stdin, process.stdout);
 
-if(promptEnter >= 2) {
-	console.log("Height:"+ height);
-	for(var i = 0; i < height; i++) {
-		console.log(space.repeat(promptEnter--) + block.repeat(i+1) + space.repeat(2) + block.repeat(i+1));
+
+prompts.question("What`s the height?", function(tower_h) {
+	let height = tower_h;              	
+ 
+	if(tower_h >= 2) {
+		console.log("Height:"+ height);
+		for(let i = 0; i < height; i++) {
+			console.log(SPACE.repeat(tower_h--) + BLOCK.repeat(i+1) + SPACE.repeat(2) + BLOCK.repeat(i+1));
+		}
+	}else {
+		console.log("Number is not >= 2");
 	}
-} else {
-	console.log("Number is not >= 2");
-}
+
+process.exit();
+});
