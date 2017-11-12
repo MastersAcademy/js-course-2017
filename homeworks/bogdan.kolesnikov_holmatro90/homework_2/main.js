@@ -1,19 +1,19 @@
 function buildPyramid(floors) {
     const block = '#';
-    hole = ' ';
+    const edge = ' ';
 
     if (floors < 2) {
         console.log('This is not a pyramid');
     }
 
     for (f = 1; f <= floors; f++) {
-        var corner = hole.repeat(floors - f),
-            floor = block.repeat(f),
-            build = corner + floor + hole + floor;
-        console.log(build);
+        let edgePyramid = edge.repeat(floors - f);
+        let floorPyramid = block.repeat(f);
+        let buildPyramidFloor = edgePyramid + floorPyramid + '  ' + floorPyramid;
+        console.log(buildPyramidFloor);
 
     }
 
 }
 
-buildPyramid(4);
+buildPyramid(40);
