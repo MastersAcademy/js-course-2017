@@ -1,0 +1,12 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "```\r node -v\r v8.7.0\r ```\r ```\r npm --version\r 5.4.2\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
