@@ -16,4 +16,4 @@ function buildPyramid(floors) {
 
 }
 
-buildPyramid(40);
+buildPyramid(4);
