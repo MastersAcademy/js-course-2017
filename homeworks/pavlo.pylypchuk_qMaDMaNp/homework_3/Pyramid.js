@@ -7,7 +7,7 @@ prompts.question("What`s the height?", function(tower_h) {
 	let height = tower_h;              	
  
 	if(tower_h < 2) {
-	    console.log("Number is not >= 2");
+	    console.error("Number is not >= 2");
 	process.exit(1);
 	}
 	
