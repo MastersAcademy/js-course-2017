@@ -15,5 +15,5 @@ prompts.question("What`s the height?", function(tower_h) {
 	for(let i = 0; i < height; i++) {
 	    console.log(SPACE.repeat(tower_h--) + BLOCK.repeat(i+1) + SPACE.repeat(2) + BLOCK.repeat(i+1));
 	}
-    process.exit(1);		
+    process.exit(0);		
 });
