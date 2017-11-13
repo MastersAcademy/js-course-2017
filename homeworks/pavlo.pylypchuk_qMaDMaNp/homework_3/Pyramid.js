@@ -11,9 +11,10 @@ prompts.question("What`s the height?", function(tower_h) {
 		for(let i = 0; i < height; i++) {
 			console.log(SPACE.repeat(tower_h--) + BLOCK.repeat(i+1) + SPACE.repeat(2) + BLOCK.repeat(i+1));
 		}
-	}else {
-		console.log("Number is not >= 2");
+	}
+	else {
+	console.log("Number is not >= 2");
 	}
 
-process.exit();
+process.exit(1);
 });
