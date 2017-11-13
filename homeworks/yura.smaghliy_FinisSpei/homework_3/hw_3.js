@@ -1,18 +1,14 @@
-var a = 8, c = a - 1, e = '  ', s = '#';
-for (let i = 0; i < a; i++) {
-    e = s + e + s;
-    let l = e;
-    let t = c;
+var height = 8, counter = height - 1, emptySpace = '  ', symbol = '#';
+for (let i = 0; i < height; i++) {
+    emptySpace = symbol + emptySpace + symbol;
+    let l = emptySpace;
+    let items = counter;
 
-    while (t > 0) {
+    while (items > 0) {
         l = ' ' + l;
-        t--;
+        items--;
     }
     console.log(l);
-    c -= 1;
+    counter -= 1;
 }
-console.log('height = ' + a);
-/*a = height
-  s = symbol
-  e = empty space
-  c = counter*/
+console.log('height = ' + height);
