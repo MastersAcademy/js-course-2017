@@ -58,6 +58,8 @@ typings/
 .env
 .idea
 
-
 #IDE config
 .idea
+
+#Mac
+.DS_Store
