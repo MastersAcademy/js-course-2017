@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MarioProblem</title>
+</head>
+<body>
+<div>
+    <input type="text" name="" id="number"> <button onclick="MarioProblem()">Create problem for Mario</button>
+</div>
+<script>
+
+function MarioProblem () {    
+        var height = document.getElementById('number').value;
+        var pyramidBlock = '#';    
+        var space = '&#160;&#160;';
+    
+    for (i = 1; i <= height ; i++) {
+        var base = pyramidBlock.repeat(i);
+        var offset = space.repeat(height-i);
+        var output = offset + base + '  ' + base;  
+        document.write(output+"<br/>");
+    } 
+    
+}
+
+
+    </script>
+</body>
+</html>
