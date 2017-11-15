@@ -1,4 +1,4 @@
-let arr = ['first', 'second', 'third', 'fourth', 'masters academy', 'mmaa', 'mma', 'gg', 'aAammm','MmaA','MmA']; // 1,1,1,1,0 | 1,0,1,1,1,0
+let arr = ['first', 'second', 'third', 'fourth', 'masters academy',  'mmaa', 'mma', 'gg', 'aAammm','MmaA','MmA']; // 1,1,1,1,0 | 1,0,1,1,1,0
 
 (function (arr) {
     const arrNew = [];
@@ -11,8 +11,6 @@ let arr = ['first', 'second', 'third', 'fourth', 'masters academy', 'mmaa', 'mma
                 resultA = resultA + 1;
             } else if (str.charAt(i) === 'm') {
                 resultM = resultM + 1;
-            } else {
-                continue;
             }
         }
         if (resultA !== resultM) {
