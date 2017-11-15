@@ -1,17 +1,16 @@
-function findLeter(item, leter) {
+function findLeter(item, letter) {
     if(typeof(item) === 'string') {
         let count = 0;
-        regexp = new RegExp(leter, 'gi');
-        item.replace(regexp, () => {
+        reg = new RegExp(letter, 'gi');
+        item.replace(reg, () => {
             count++;
         });
         return count;
     } else {
-        console.log('It\'s not string');
         return 'not string';
     }
 }
-let str = ['first', 'second', 'third', 'fourth', 'masters academy', 'Masters Academy', 'MA', 'ma'];
+let str = ['first', 'second', 'third', 'fourth', 'masters academy', 'Masters Academy', 'MA', 'ma', 1];
 let result = str.map((item) => {
     let countA = findLeter(item, 'a');
     let countM = findLeter(item, 'm');
@@ -24,7 +23,6 @@ let result = str.map((item) => {
             return 1;
         default:
             return 0;
-
     }
 });
 console.log(result);
