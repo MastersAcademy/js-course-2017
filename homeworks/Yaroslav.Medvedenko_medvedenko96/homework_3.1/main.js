@@ -1,4 +1,4 @@
-let arr = ['first', 'second', 'third', 'fourth', 'masters academy', 'mmaa', 'mma', 'gg']; // 1, 1, 1, 1, 0 | 1, 0 ,1
+let arr = ['first', 'second', 'third', 'fourth', 'masters academy', 'mmaa', 'mma', 'gg', 'aAammm','MmaA','MmA']; // 1,1,1,1,0 | 1,0,1,1,1,0
 
 (function (arr) {
     const arrNew = [];
@@ -6,9 +6,10 @@ let arr = ['first', 'second', 'third', 'fourth', 'masters academy', 'mmaa', 'mma
         let resultA = 0;
         let resultM = 0;
         for (let i = 0; i < item.length; i++ ) {
-            if (item.charAt(i) === 'a') {
+            let str = item.toLowerCase();
+            if (str.charAt(i) === 'a') {
                 resultA = resultA + 1;
-            } else if (item.charAt(i) === 'm') {
+            } else if (str.charAt(i) === 'm') {
                 resultM = resultM + 1;
             } else {
                 continue;
