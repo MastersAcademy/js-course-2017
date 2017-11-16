@@ -22,7 +22,7 @@ function getArray(arr) {
         }
     });
 
-    return res
+    return res;
 }
 
 function getArray2(arr) {
