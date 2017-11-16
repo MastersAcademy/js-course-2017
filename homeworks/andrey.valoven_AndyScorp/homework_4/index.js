@@ -1,28 +1,32 @@
-function findLeter(item, letter) {
-    if(typeof(item) === 'string') {
-        let count = 0;
-        reg = new RegExp(letter, 'gi');
-        item.replace(reg, () => {
-            count++;
-        });
-        return count;
-    } else {
-        return 'not string';
+function homework4_1(arr) {
+    function countLetters(item, letter) {
+        if (typeof item === 'string') {
+            let count = 0;
+            item.replace(new RegExp(letter, 'gi'), () => {
+                count++;
+            });
+            return count;
+        } else {
+            return 'not string';
+        }
     }
+    return arr.map((item) => {
+        let countLettersA = countLetters(item, 'a');
+        let countLettersM = countLetters(item, 'm');
+        switch (true) {
+            case countLettersM === 'not string' && countLettersA === 'not string':
+                return countLettersM;
+            case countLettersM === countLettersA:
+                return 1;
+            case countLettersM === 0 && countLettersA === 0:
+                return 1;
+            default:
+                return 0;
+        }
+    });
 }
-let str = ['first', 'second', 'third', 'fourth', 'masters academy', 'Masters Academy', 'MA', 'ma', 1];
-let result = str.map((item) => {
-    let countA = findLeter(item, 'a');
-    let countM = findLeter(item, 'm');
-    switch(true) {
-        case countM === 'not string' && countA === 'not string':
-            return countM;
-        case countM === countA:
-            return 1;
-        case countM === 0 && countA === 0:
-            return 1;
-        default:
-            return 0;
-    }
-});
-console.log(result);
+
+
+let str = ['first', 'second', 'third', 'fourth', 'masters academy', 'Masters Academy', 'MA', 'ma'];
+
+console.log(homework4_1(str));
