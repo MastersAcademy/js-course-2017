@@ -36,12 +36,13 @@ function transformString(str) {
 }
 
 function sum(number) {
+    let reverseNumber = number.split("").reverse().join("");
     let result = 0;
-    for (let i=0; i<number.length; i++) {
-        if (i % 2 === 0) {
-            result = result + checkOneNumber(+number[i]);
+    for (let i=0; i<reverseNumber.length; i++) {
+        if (i % 2 !== 0) {
+            result = result + checkOneNumber(+reverseNumber[i]);
         } else {
-            result = result + +number[i];
+            result = result + +reverseNumber[i];
         }
     }
     return result;
