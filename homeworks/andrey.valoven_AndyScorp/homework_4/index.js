@@ -1,4 +1,4 @@
-function homework4_1(arr) {
+function homework4(arr) {
     function countLetters(item, letter) {
         if (typeof item === 'string') {
             let count = 0;
@@ -29,4 +29,4 @@ function homework4_1(arr) {
 
 let str = ['first', 'second', 'third', 'fourth', 'masters academy', 'Masters Academy', 'MA', 'ma'];
 
-console.log(homework4_1(str));
+console.log(homework4(str));
