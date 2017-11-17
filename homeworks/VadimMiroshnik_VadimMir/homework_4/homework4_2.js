@@ -6,7 +6,7 @@ function card(){
     let arrNew = [];
     
     
-    for(let h = 0; h < card.length; h++ ){                                                                         // Проверка на символы
+    for(let h = 0; h < card.length; h++ ){                                                                         
         
         if((arr[h] >= 0 && arr[h] <= 9 ) || arr[h] == ' ' || arr[h] == '.' || arr[h] == ','){
                     
@@ -25,7 +25,7 @@ function card(){
    
    
 
-    for (let w = 0; w < arrNew.length; w++) {                                                                       // Удаление разделительных символов
+    for (let w = 0; w < arrNew.length; w++) {                                                                       
         
         if(arrNew[w] == ' '|| arrNew[w] == '.' || arrNew[w] == ',') {
             
@@ -36,7 +36,7 @@ function card(){
         
 
            
-    if( arrNew.length % 2 == 0){                                                                                     // проверка с четным количеством символов
+    if( arrNew.length % 2 == 0){                                                                                    
 
         for(let i = 0; i < arrNew.length; i++){
             
@@ -61,7 +61,7 @@ function card(){
     }
    
     
-    if ( arrNew.length % 2 != 0){                                                                                       //проверка не с четным количеством символов
+    if ( arrNew.length % 2 != 0){                                                                                       
         for(let j = 0; j < arrNew.length; j++){
             
             
