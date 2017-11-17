@@ -1,28 +1,28 @@
-const card = '5277 0794-6715-2699';
-let cardCount=[];
-
-let pattern = /[^\d\s"£$%^&_+-=]/;
-let validation = pattern.test(card);
-
-function getSumNumber(number) {
-    let sum = 0;
-    while (number) {
-        let temp = number % 10;
-        number = (number - temp) / 10;
-        sum += temp;
-    }
-    return sum;
-}
-
-function arraySum(array){
-    let summ = 0;
-    for(let i = 0; i < array.length; i++){
-        summ += array[i];
-    }
-    return summ;
-}
+const card = '5277@0794-6715-2699';
 
 let validateCard = function (value) {
+    let cardCount=[];
+    let pattern = /[^\d\s"£$%^&_+-=]/;
+    let validation = pattern.test(card);
+
+    function getSumNumber(number) {
+        let sum = 0;
+        while (number) {
+            let temp = number % 10;
+            number = (number - temp) / 10;
+            sum += temp;
+        }
+        return sum;
+    }
+
+    function arraySum(array){
+        let summ = 0;
+        for(let i = 0; i < array.length; i++){
+            summ += array[i];
+        }
+        return summ;
+    }
+
     if (validation) {
         console.log('Invalid card number');
         return null;
