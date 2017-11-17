@@ -1,0 +1,1 @@
+https://github.com/MastersAcademy/js-course-2017/issues/1
