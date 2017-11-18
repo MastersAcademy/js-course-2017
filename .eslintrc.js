@@ -23,10 +23,10 @@ module.exports = {
         // override default options for rules from base configurations
         // "comma-dangle": ["error", "always"],
         'no-cond-assign': ['error', 'always'],
-        eqeqeq: ['error', 'smart'],
+        // eqeqeq: ['error', 'smart'],
 
         // disable rules from base configurations
-        // "no-console": "off",
+        "no-console": "off",
         'block-scoped-var': 'error',
         'guard-for-in': 'error',
         'no-loop-func': 'error',
