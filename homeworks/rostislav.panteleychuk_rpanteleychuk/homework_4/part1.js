@@ -1,4 +1,4 @@
-let arh = ['first', 'second', 'third', 'fourth', 'masters'];
+let arh = ['first', 'second', 'third', 'fourth', 'master'];
 
 let m;
 let a;
