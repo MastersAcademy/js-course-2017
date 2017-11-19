@@ -1,54 +1,30 @@
-let card = '4561261212345464';
-
-function checkCard(card) {
-
-    let arr = card.split('');
-    let arrNew = [];
-    for(let i = 0; i < arr.length; i++){
-        if (i % 2 === 0){
-            let value = parseInt(arr[i]) * 2;
-            if (value > 9){
-                value = value.toString();
-                arrNew.push(+value.charAt(0) + +value.charAt(1));
-            } else {
-                arrNew.push(arr[i]);
-            }
-
-        } else {
-            arrNew.push(arr[i]);
-        }
-    }
-    let result = 0;
-    arrNew.forEach(function (item) {
-        result += +item;
-    });
-    return result;
-}
-console.log(checkCard(card));
-
-
-
-
+let card = '4561 2612 1234 5467';
 
 function Moon(card) {
     let arr = [];
-    let cardNumber = card.toString();
-
-    for(let i = 0; i < cardNumber.length; i++) {
-        if(i % 2 === 0) {
-            let m = parseInt(cardNumber[i]) * 2;
-            if(m > 9) {
-                arr.push(m - 9);
+    if (/[A-Za-z]/g.test(card)) {
+        console.log('Error');
+        return null;
+    } else {
+        let numberFilter = card.match(/\d/g);
+        for (let i = 0; i < numberFilter.length; i++) {
+            if (i % 2 === 0) {
+                let m = parseInt(numberFilter[i]) * 2;
+                if (m > 9) {
+                    arr.push(m - 9);
+                } else {
+                    arr.push(m);
+                }
             } else {
-                arr.push(m);
+                let n = parseInt(numberFilter[i]);
+                arr.push(n);
             }
-        } else {
-            let n = parseInt(cardNumber[i]);
-            arr.push(n);
         }
+        let result = arr.reduce(function (a, b) {
+            return a + b;
+        });
+        return result % 10 === 0;
     }
-    let result = arr.reduce(function(a, b) { return a + b; });
-    return result;
 }
-
 console.log(Moon(card));
+
