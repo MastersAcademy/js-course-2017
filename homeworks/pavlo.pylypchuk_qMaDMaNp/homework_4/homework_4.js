@@ -1,5 +1,5 @@
 let a = ['meomeoi', 'petya', 'masa', 'julik','master academy'];
-let b = a[0].split('');
+let b = a[0].split(''); // change index here to change the world =)
 let mSaver = [];
 let aSaver = [];
 
