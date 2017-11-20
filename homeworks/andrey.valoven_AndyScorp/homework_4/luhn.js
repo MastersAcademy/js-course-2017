@@ -1,4 +1,4 @@
-function multiplyingArrayElements(num) {
+function multiplyingArrayElements(num, card) {
     for(let i = num; i < card.length; i+=2) {
         card[i] *=  2;
         if(card[i] > 9)
@@ -6,7 +6,7 @@ function multiplyingArrayElements(num) {
     }
 }
 
-function sumAllArrayElements() {
+function sumAllArrayElements(card) {
     let res = 0;
     card.forEach(element => {
         res += +element;
@@ -23,12 +23,12 @@ function luhn(card) {
 
     card = card.split('');
     if(card.length % 2 === 0) {
-        multiplyingArrayElements(0);
+        multiplyingArrayElements(0, card);
     } else {
-        multiplyingArrayElements(1);
+        multiplyingArrayElements(1, card);
     }
 
-    return sumAllArrayElements() % 10 === 0;
+    return sumAllArrayElements(card) % 10 === 0;
 }
 
 console.log(luhn(4532505827704369));
