@@ -1,0 +1,10 @@
+{
+  "name": "homework_2",
+  "version": "0.1.0",
+  "description": "A program for printing two half-pyramids made of special symbol ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "SvMak"
+}
