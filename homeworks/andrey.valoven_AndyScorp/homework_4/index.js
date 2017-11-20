@@ -1,15 +1,15 @@
-function homework4(arr) {
-    function countLetters(item, letter) {
-        if (typeof item === 'string') {
-            let count = 0;
-            item.replace(new RegExp(letter, 'gi'), () => {
-                count++;
-            });
-            return count;
-        } else {
-            return 'not string';
-        }
+function countLetters(item, letter) {
+    if (typeof item === 'string') {
+        let count = 0;
+        item.replace(new RegExp(letter, 'gi'), () => {
+            count++;
+        });
+        return count;
+    } else {
+        return 'not string';
     }
+}
+function homework4(arr) {
     return arr.map((item) => {
         let countLettersA = countLetters(item, 'a');
         let countLettersM = countLetters(item, 'm');

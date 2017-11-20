@@ -1,19 +1,19 @@
-function luhn(card) {
-    function multiplyingArrayElements(num) {
-        for(let i = num; i < card.length; i+=2) {
-            card[i] *=  2;
-            if(card[i] > 9)
-                card[i] -= 9;
-        }
+function multiplyingArrayElements(num) {
+    for(let i = num; i < card.length; i+=2) {
+        card[i] *=  2;
+        if(card[i] > 9)
+            card[i] -= 9;
     }
+}
 
-    function sumAllArrayElements() {
-        let res = 0;
-        card.forEach(element => {
-            res += +element;
-        });
-        return res;
-    }
+function sumAllArrayElements() {
+    let res = 0;
+    card.forEach(element => {
+        res += +element;
+    });
+    return res;
+}
+function luhn(card) {
 
     card = typeof(card) === 'string' ? card.replace(/(\s|-)/g, '') : card + '';
     if(/[^\d]/.test(card)) {
