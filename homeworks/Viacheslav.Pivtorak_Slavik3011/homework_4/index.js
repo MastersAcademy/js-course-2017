@@ -1,0 +1,38 @@
+const arrFilter = arr => arr.map(item => {
+	let matchM = item.match(/m/ig),
+		matchA = item.match(/a/ig);
+
+	if(!matchM && !matchA) return 1;
+	if(item.match(/m/ig).length === item.match(/a/ig).length) return 1;
+	return 0;
+})
+
+const arr = ["first", "second", "third", "fourth", "masters academy"];
+
+console.log(arrFilter(arr));
+
+
+
+const card = '341347208470578';
+
+const luna = card => {
+	const arr = card.match(/[0-9]/g),
+		length = arr.length;
+
+	let result = 0;
+	
+	arr.forEach((number, i) => {
+		if(length%2 == i%2) {
+			number *= 2;
+			if(number > 9) {
+				number = number - 10 + 1;
+			}
+		}
+		result += +number;
+	})
+
+	return result%10 === 0;
+
+}
+
+console.log(luna(card));
