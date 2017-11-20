@@ -3,14 +3,13 @@ const arrFilter = arr => arr.map(item => {
 		matchA = item.match(/a/ig);
 
 	if(!matchM && !matchA) return 1;
-	if(item.match(/m/ig).length === item.match(/a/ig).length) return 1;
+	if(matchM && matchA && matchM.length === matchA.length) return 1;
 	return 0;
 })
 
 const arr = ["first", "second", "third", "fourth", "masters academy"];
 
 console.log(arrFilter(arr));
-
 
 
 const card = '341347208470578';
