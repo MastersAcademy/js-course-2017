@@ -15,6 +15,8 @@ console.log(arrFilter(arr));
 const card = '341347208470578';
 
 const luna = card => {
+	if(/[^0-9\.,\/'":;-=+]/.test(card)) return null;
+	
 	const arr = card.match(/[0-9]/g),
 		length = arr.length;
 
@@ -24,7 +26,7 @@ const luna = card => {
 		if(length%2 == i%2) {
 			number *= 2;
 			if(number > 9) {
-				number = number - 10 + 1;
+				number = number - 9;
 			}
 		}
 		result += +number;
