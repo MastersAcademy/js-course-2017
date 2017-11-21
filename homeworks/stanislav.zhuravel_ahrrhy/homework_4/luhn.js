@@ -1,6 +1,6 @@
 function checkLuhn(numbers) {
 
-    if (/[^0-9-\s]+/.test(numbers)) return null;
+    if (/[a-zA-Z]/.test(numbers)) return null;
 
     let sum = 0,
         digit = 0,
@@ -20,4 +20,4 @@ function checkLuhn(numbers) {
     }
     return (sum % 10) === 0;
 }
-console.log(checkLuhn('23424/234324/242-234ffb'));
+console.log(checkLuhn('23424234324242234'));
