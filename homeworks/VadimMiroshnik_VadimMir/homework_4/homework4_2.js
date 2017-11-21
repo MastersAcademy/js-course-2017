@@ -6,16 +6,15 @@ function card(){
     let arrayCardNew = [];
     
     
-    for(let h = 0; h < card.length; h++ ){                                                                         
-        
-        if((arrayCard[h] >= 0 && arrayCard[h] <= 9 ) || arrayCard[h] == ' ' || arrayCard[h] == '.' || arrayCard[h] == ','){
-                    
+    for(let h = 0; h < card.length; h++ ){                                                                                      // Проверка на наличие символов.
+                                                                                                                                
+        if((arrayCard[h] >= 0 && arrayCard[h] <= 9 ) || arrayCard[h] == ' ' || arrayCard[h] == '.' || arrayCard[h] == ','){     // Если символ разделяющий, перезаписываем в новый массив    
+                                                                                                                                //числа и символы.
             arrayCardNew [h] = arrayCard [h]; 
-                   
-                    
-        }else{
+                             
+        }else{                                                                                                                  // Если нет, выводим null, ошибка.            
             card = 'null';
-            console.log('ошибка входных данных');
+            console.log('ошибка входных данных');   
             return card;
 
         }
@@ -25,7 +24,7 @@ function card(){
    
    
 
-    for (let w = 0; w < arrayCardNew.length; w++) {                                                                       
+    for (let w = 0; w < arrayCardNew.length; w++) {                                                                             //Удаляем разделяющий символ массива вместе с индексом.
         
         if(arrayCardNew[w] == ' '|| arrayCardNew[w] == '.' || arrayCardNew[w] == ',') {
             
@@ -36,12 +35,11 @@ function card(){
         
 
            
-    if( arrayCardNew.length % 2 == 0){                                                                                    
+    if( arrayCardNew.length % 2 == 0){                                                                                            //  Проверяем на чётность карту.
 
-        for(let i = 0; i < arrayCardNew.length; i++){
+        for(let i = 0; i < arrayCardNew.length; i++){                                                                             //  Если карта с чётным кол-вом символом                                                                                                                                // 
             
-            
-            if (i % 2 != 0){              
+            if (i % 2 != 0){                                                                                                       // выполняем условие по методу Луна. 
                unpaired_Element = parseInt(arrayCardNew[i]);   
                sum_unpaired  = unpaired_Element + sum_unpaired;
             }
@@ -61,7 +59,7 @@ function card(){
     }
    
     
-    if ( arrayCardNew.length % 2 != 0){                                                                                       
+    if ( arrayCardNew.length % 2 != 0){                                                                                              // Для не чётных карт.
         for(let j = 0; j < arrayCardNew.length; j++){
             
             
@@ -84,7 +82,7 @@ function card(){
        
     }
    
-    if(sum_Card % 10 == 0){
+    if(sum_Card % 10 == 0){                                                                                                         //Проверка на кратность 10-ти.
         sum_Card = 'true';
     }
  else{
