@@ -54,8 +54,7 @@ function card(){
                 sum = sum + sum_paired;        
             }
             sum_Card = sum_unpaired  + sum;
-        }    
-      
+        }         
     }
    
     
@@ -78,8 +77,7 @@ function card(){
                 sum = sum + sum_unpaired;        
             }
             sum_Card = sum_paired + sum;
-        }    
-       
+        }          
     }
    
     if(sum_Card % 10 == 0){                                                                                                         //Проверка на кратность 10-ти.
