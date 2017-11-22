@@ -1,13 +1,15 @@
 let myArray = new Array('first', 'second', 'third', 'fourth', 'masters academy', 'M', 'mA', 'op');
 
-let save_Array, newArray,  v = 0, u = 0;
+let save_Array;
+let newArray; 
+let v = 0;
+let u = 0;
 
 for (let i = 0; i < myArray.length; i++){
    
     save_Array = myArray[i];
     newArray = save_Array.match(/[\S\s]{1,1}/g);
-    
-
+;    
     for(let j = 0; j < newArray.length; j++){
 
         if ((newArray[j] == 'm') || (newArray[j] == 'M')){
@@ -28,6 +30,5 @@ for (let i = 0; i < myArray.length; i++){
     }
     v = 0;
     u = 0;
-
 }
 console.log(myArray);
