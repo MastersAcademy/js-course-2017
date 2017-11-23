@@ -1,6 +1,8 @@
 // Input data
 let data = ['Hello', 'Alpha', 'browser', 'GNOME', '-#455d', undefined, 1235, 'marmelad', 'aA'];
 
+// ------------------------ v1 with regexp ----------------------------
+
 // Function that converts input to numeric values
 const convertItem = data => {
     let mCount = 0,
@@ -46,7 +48,49 @@ const convert = data => {
     return data;
 }
 
-// Show result
-let result = convert(data);
+// ------------------------ v2 without regexp ----------------------------
 
-console.log(result);
+function convertTwo(data) {
+
+    data = data.filter(item => {
+        if (typeof item === 'string') {
+            return item;
+        }
+    });
+
+    data = data.map(item => {
+        let mCount = 0,
+            aCount = 0;
+
+        item = item.toLowerCase();
+
+        for (let i = 0; i < item.length; i++) {
+            if (item[i] === 'm') {
+                mCount++
+            } else if (item[i] === 'a') {
+                aCount++
+            }
+        }
+
+        switch (true) {
+            case (mCount === 0 && aCount === 0):
+                return 1;
+                break;
+            case (mCount === aCount):
+                return 1;
+                break;
+            default:
+                return 0;
+        }
+
+    });
+
+    return data;
+}
+
+// ------------------- Show result ----------------------
+let resultOne = convert(data);
+let resultTwo = convertTwo(data);
+
+console.log(resultOne);
+console.log(resultTwo);
