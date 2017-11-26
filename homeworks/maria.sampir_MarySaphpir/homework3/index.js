@@ -1,5 +1,5 @@
 const array = [
-    'Good-bye, my friend, goodbye.',
+    'Good-bye, my friend, goodbye.', //m=1
     'Darling, you\'re in my chest.',
     'Assumed separation',
     'He promises to be ahead of the meeting.',
@@ -16,8 +16,10 @@ dataForScanning = (array) => {
         elem = array[i].toLowerCase();
         for (let j = 0; j < elem.length; j++) {
             (elem.charAt(j) === 'm') ? amountOfM++ : (elem.charAt(j) === 'a') ? amountOfA++ : '';
+
         }
         (amountOfA === amountOfM || amountOfM === 0 && amountOfA === 0) ? res.push(1) : res.push(0);
+        amountOfM = amountOfA = 0;
         console.log(`m: ${amountOfM}, a: ${amountOfA}`)
 
     }
