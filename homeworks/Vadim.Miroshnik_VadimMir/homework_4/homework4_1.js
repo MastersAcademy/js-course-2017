@@ -1,19 +1,20 @@
 let myArray = new Array('first', 'second', 'third', 'fourth', 'masters academy', 'M', 'mA', 'op');
-let x = myArray.length;
-let b, s, arr, c, v = 0, u = 0;
 
-for (let i = 0; i < x; i++){
+let save_Array;
+let newArray; 
+let v = 0;
+let u = 0;
+
+for (let i = 0; i < myArray.length; i++){
    
-    b = myArray[i];
-    arr = b.match(/[\S\s]{1,1}/g);
-    c = arr.length;
-
-    for(let j = 0; j < c; j++){
-
-        if ((arr[j] == 'm') || (arr[j] == 'M')){
+    save_Array = myArray[i];
+    newArray = save_Array.match(/[\S\s]{1,1}/g);
+    
+    for(let j = 0; j < newArray.length; j++){
+        if ((newArray[j] == 'm') || (newArray[j] == 'M')){
             v++;
         }
-        if ((arr[j] == 'a')|| (arr[j] == 'A')){
+        if ((newArray[j] == 'a')|| (newArray[j] == 'A')){
             u++;
         }
         if(v != u){
@@ -28,6 +29,5 @@ for (let i = 0; i < x; i++){
     }
     v = 0;
     u = 0;
-
 }
-console.log(myArray);
++console.log(myArray);
