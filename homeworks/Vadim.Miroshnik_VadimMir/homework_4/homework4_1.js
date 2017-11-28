@@ -1,6 +1,6 @@
 let inputArray = ['first', 'second', 'third', 'fourth', 'masters academy', 'M', 'mA', 'op'];
-
-let outArray = inputArray.map(function (item) {
+let search = function (inputArray){
+return inputArray.map(function (item) {
         let search_A = 0;
         let search_M = 0;
         let result = 0;
@@ -11,8 +11,8 @@ let outArray = inputArray.map(function (item) {
         }
        if (search_A !== search_M) result = 0;
         else result = 1;
-        return result;
-    }); 
+        return result;        
+    })}; 
    
 
-console.log(outArray);
+console.log(search(inputArray));
