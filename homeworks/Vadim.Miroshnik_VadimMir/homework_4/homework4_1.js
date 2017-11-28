@@ -1,33 +1,18 @@
-let myArray = new Array('first', 'second', 'third', 'fourth', 'masters academy', 'M', 'mA', 'op');
+let inputArray = ['first', 'second', 'third', 'fourth', 'masters academy', 'M', 'mA', 'op'];
 
-let save_Array;
-let newArray; 
-let v = 0;
-let u = 0;
-
-for (let i = 0; i < myArray.length; i++){
+let outArray = inputArray.map(function (item) {
+        let search_A = 0;
+        let search_M = 0;
+        let result = 0;
+        result = item.toLocaleUpperCase();
+        for (let i = 0; i < result.length; i++) {
+            if (result[i] === 'A') search_A ++;
+            if (result[i] === 'M') search_M ++;
+        }
+       if (search_A !== search_M) result = 0;
+        else result = 1;
+        return result;
+    }); 
    
-    save_Array = myArray[i];
-    newArray = save_Array.match(/[\S\s]{1,1}/g);
-    
-    for(let j = 0; j < newArray.length; j++){
-        if ((newArray[j] == 'm') || (newArray[j] == 'M')){
-            v++;
-        }
-        if ((newArray[j] == 'a')|| (newArray[j] == 'A')){
-            u++;
-        }
-        if(v != u){
-            myArray[i] = 0;
-        }
-        if(v == u){
-            myArray[i] = 1;
-        }
-        if(v == 0 && u == 0){
-            myArray[i] = 1;
-        }
-    }
-    v = 0;
-    u = 0;
-}
-+console.log(myArray);
+
+console.log(outArray);
