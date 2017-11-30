@@ -1,6 +1,6 @@
 let card = '4561 2612 1234 5464';
 
-let methot_Luna = function (card){    
+let method_Luna = function (card){    
     
     newCard = card.replace(/\s|-/g, '');
     let pairing;
@@ -64,6 +64,6 @@ let methot_Luna = function (card){
 
 
    
-console.log(methot_Luna(card));
+console.log(method_Luna(card));
 
 
