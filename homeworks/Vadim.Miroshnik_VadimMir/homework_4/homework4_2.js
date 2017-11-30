@@ -1,7 +1,5 @@
 let card = '4561 2612 1234 5464';
-
-let method_Luna = function (card){    
-    
+let method_Luna = function (card){        
     newCard = card.replace(/\s|-/g, '');
     let pairing;
     let multiply = 0; 
@@ -12,16 +10,14 @@ let method_Luna = function (card){
     let cardValid = function(card){
         if (newCard.search(/\D/) !=-1) return null;
         if (newCard.search(/\d/) !=-1 ) return newCard;        
-    };
-    
+    }; 
     let pairingCard = function(){
         if(newCard.length % 2 === 0) pairing = 0;  
-        else  pairing = 1;
+        else pairing = 1;
         return pairing;
     };  
     pairing = pairingCard(pairing);
-    let lunaCard_multiply = function(){    
-       
+    let lunaCard_multiply = function(){     
         for(let i = pairing; i < newCard.length; i = i + 2){
             let numeral = parseInt(newCard[i]);
             multiply = numeral * 2; 
@@ -41,13 +37,12 @@ let method_Luna = function (card){
     };
     let lunaCard = function (){
         sumCard =  lunaCard_multiply(sum_of_multiplied) + lunaCard_sum(sum);
-        if (sumCard % 10 === 0)  card = true;
+        if (sumCard % 10 === 0) card = true;
         else card = false;
         return card;            
     };
     return lunaCard(card);
-};
-   
+};  
 console.log(method_Luna(card));
 
 
