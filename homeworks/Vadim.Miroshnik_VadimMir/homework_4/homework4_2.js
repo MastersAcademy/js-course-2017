@@ -1,4 +1,4 @@
-let card = '4561 2612 1234 5464';
+let card = '4561 2612 1234 5467';
 let methodLuna = function (card){        
     let newCard = card.replace(/\s|-/g, '');
     let sumOfmultiplied = 0;
@@ -30,10 +30,7 @@ let methodLuna = function (card){
         }   
         return sum;
     };
-    let lunaCard = function (card){
-        let sumCard =  lunaCardMultiply(sumOfmultiplied) + lunaCardSum(sum);
-        return sumCard % 10 === 0;                
-    };
-    return lunaCard(card);
+    let sumCard =  lunaCardMultiply(sumOfmultiplied) + lunaCardSum(sum);
+    return sumCard % 10 === 0;                
 };  
 console.log(methodLuna(card));
