@@ -60,10 +60,3 @@ function Timer(val) {
     }
     console.log("\x1b[37mScreen:\x1b[36m" + screen);
 }
-
-
-
-
-
-
-
