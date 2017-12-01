@@ -3,15 +3,12 @@ let methodLuna = function (card){
     let newCard = card.replace(/\s|-/g, '');
     let sumOfmultiplied = 0;
     let sum = 0;
-    let result = 0;      
-    let cardValid = function(card){
-        if (newCard.search(/\D/) !=-1) return null;
-        if (newCard.search(/\d/) !=-1 ) return newCard;        
-    }; 
-    let pairingCard = function(card){
-        return newCard.length % 2;  
-    };  
-    let pairing = pairingCard(card);     
+    let result = 0;   
+    if (newCard.search(/\D/) !=-1) return null;
+    if (newCard.search(/\d/) !=-1 ) { 
+        let newCard = card;        
+    }
+    let pairing = newCard.length % 2;       
     for(let i = pairing; i < newCard.length; i = i + 2){
         let numeral_1 = 0;
         let numeral = parseInt(newCard[i]);
@@ -24,7 +21,7 @@ let methodLuna = function (card){
         sumOfmultiplied += multiply;    
         sum += numeral_1;
     }
-    let sumCard =  sumOfmultiplied + sum;     
-    return sumCard %  10 === 0;
+    let sumCard = sumOfmultiplied + sum;     
+    return sumCard % 10 === 0;
 };  
 console.log(methodLuna(card));
