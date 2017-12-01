@@ -9,7 +9,7 @@ const PHRASES = {
     enter: "\x1b[37mPress button \x1b[35mR\x1b[37m to run timer," +
     " \x1b[35mP\x1b[37m to pause, \x1b[35mF\x1b[37m to screen," +
     " \x1b[35mG\x1b[37m to reset, \x1b[35mE\x1b[37m to exit:"
-}
+};
 let start = Date.now();
 let state = "pause";
 let sec = 1000;
