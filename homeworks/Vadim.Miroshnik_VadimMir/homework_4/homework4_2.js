@@ -11,26 +11,20 @@ let methodLuna = function (card){
     let pairingCard = function(card){
         return newCard.length % 2;  
     };  
-    let pairing = pairingCard();
-    let lunaCardMultiply = function(card){     
-        for(let i = pairing; i < newCard.length; i = i + 2){
-            let numeral = parseInt(newCard[i]);
-            let multiply = numeral * 2; 
-            if (multiply > 9){
-                multiply = multiply - 9;
-            }
-            sumOfmultiplied += multiply;
+    let pairing = pairingCard(card);     
+    for(let i = pairing; i < newCard.length; i = i + 2){
+        let numeral_1 = 0;
+        let numeral = parseInt(newCard[i]);
+        if (pairing == 0) numeral_1 = parseInt(newCard[i + 1]);
+        if (pairing == 1) numeral_1 = parseInt(newCard[i - 1]);
+        let multiply = numeral * 2; 
+        if (multiply > 9){
+            multiply = multiply - 9;
         }
-        return sumOfmultiplied; 
-    };
-    let lunaCardSum = function(card){
-        for (let j = pairing + 1; j < newCard.length; j = j + 2 ){
-            let numeral_1 = parseInt(newCard[j]);
-            sum += numeral_1;
-        }   
-        return sum;
-    };
-    let sumCard =  lunaCardMultiply(sumOfmultiplied) + lunaCardSum(sum);
-    return sumCard % 10 === 0;                
+        sumOfmultiplied += multiply;    
+        sum += numeral_1;
+    }
+    let sumCard =  sumOfmultiplied + sum;     
+    return sumCard %  10 === 0;
 };  
 console.log(methodLuna(card));
