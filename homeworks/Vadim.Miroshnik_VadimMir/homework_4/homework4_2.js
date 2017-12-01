@@ -35,9 +35,7 @@ let method_Luna = function (card){
     };
     let lunaCard = function (){
         sumCard =  lunaCard_multiply(sum_of_multiplied) + lunaCard_sum(sum);
-        if (sumCard % 10 === 0) card = true;
-        else card = false;
-        return card;            
+        return sumCard % 10 === 0;                
     };
     return lunaCard(card);
 };  
