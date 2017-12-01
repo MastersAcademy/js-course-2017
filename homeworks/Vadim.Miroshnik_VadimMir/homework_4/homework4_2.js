@@ -12,11 +12,9 @@ let method_Luna = function (card){
         if (newCard.search(/\d/) !=-1 ) return newCard;        
     }; 
     let pairingCard = function(){
-        if(newCard.length % 2 === 0) pairing = 0;  
-        else pairing = 1;
-        return pairing;
+        if(newCard.length % 2 === 0) return newCard.length % 2;  
     };  
-    pairing = pairingCard(pairing);
+    pairing = pairingCard();
     let lunaCard_multiply = function(){     
         for(let i = pairing; i < newCard.length; i = i + 2){
             let numeral = parseInt(newCard[i]);
