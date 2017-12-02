@@ -4,8 +4,11 @@ let methodLuna = function (card){
     let sumOfmultiplied = 0;
     let sum = 0;
     const result = 0;   
+    
     if (newCard.search(/\D/) !=-1) return null;
+    
     let pairing = newCard.length % 2;       
+    
     for(let i = pairing; i < newCard.length; i = i + 2){
         let numeral_1 = 0;
         let numeral = parseInt(newCard[i]);
