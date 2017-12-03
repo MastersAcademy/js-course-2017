@@ -10,7 +10,7 @@ const PHRASES = {
     " \x1b[35mP\x1b[37m to pause, \x1b[35mF\x1b[37m to screen," +
     " \x1b[35mG\x1b[37m to reset, \x1b[35mE\x1b[37m to exit:"
 }
-let START = Date.now();
+let startTimer = Date.now();
 let state = "pause";
 let sec = 1000;
 let milSec = sec / 1000;
@@ -27,10 +27,10 @@ process.stdin.on('keypress', key => {
         pauseTime = scorer;
         state = "pause";
     } else if (key === "r") {
-        START = Date.now() - pauseTime;
+        startTimer = Date.now() - pauseTime;
         state = "resume";
     } else if (key === "g") {
-        START = Date.now();
+        startTimer = Date.now();
         state = "on";
     } else if (key === "e") {
         console.log('\x1Bc');
@@ -50,7 +50,7 @@ function Timer(val) {
     return actualTime;
 
 }function writeTimer(start, state) {
-    scorer = Number( Date.now()- START );
+    scorer = Number( Date.now()- startTimer );
     console.log('\x1Bc');
     console.log(PHRASES.enter);
     if ( state === "pause") {
