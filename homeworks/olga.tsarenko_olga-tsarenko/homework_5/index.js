@@ -5,9 +5,9 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let second = 1000;
-let minute = second * 60;
-let milSec = second / 1000;
+let SECOND = 1000;
+let MINUTE = SECOND * 60;
+let MILSEC = SECOND / 1000;
 let isON = false;
 let store;
 let timestampsArr = [];
@@ -21,9 +21,9 @@ function myTimer() {
         () => {
             const currentTime = Date.now();
             const diff = Number(currentTime - START);
-            let minutes = Math.floor((diff % (1000 * 60 * 60)) / minute);
-            let seconds = Math.floor(diff % minute / second);
-            let milSeconds = Math.floor(diff % second / milSec);
+            let minutes = Math.floor((diff % (SECOND * 60 * 60)) / MINUTE);
+            let seconds = Math.floor(diff % MINUTE / SECOND);
+            let milSeconds = Math.floor(diff % SECOND / MILSEC);
             let result = minutes + ':' + seconds + ':' + milSeconds;
             store = result;
             rl.output.write('\033[2J\033[0f');
