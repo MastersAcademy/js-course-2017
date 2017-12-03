@@ -48,8 +48,9 @@ function Timer(val) {
     let milSeconds = Math.floor(val % sec / milSec);
     actualTime = minutes + ":" + seconds + ":" + milSeconds;
     return actualTime;
+}
 
-}function writeTimer(start, state) {
+function writeTimer(start, state) {
     scorer = Number( Date.now()- startTimer );
     console.log('\x1Bc');
     console.log(PHRASES.enter);
