@@ -6,7 +6,7 @@ let seconds;
 function getTime() {
     setInterval(function(){
         console.log('\33c');
-        const currentDate = new Date;
+        let currentDate = new Date;
         finalTime = new Date (currentDate - initialDate);
         minutes = finalTime.getMinutes();
         seconds = finalTime.getSeconds();
