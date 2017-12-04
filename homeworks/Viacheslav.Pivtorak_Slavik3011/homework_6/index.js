@@ -10,8 +10,8 @@ setInterval(() => {
         if (seconds < 10) seconds = '0' + seconds;
         difference = minutes + ':' + seconds;
     }
+    
     process.stdout.cursorTo(0);
-    process.stdout.clearLine();  // clear current text
-
+    process.stdout.clearLine();
     process.stdout.write(`${difference}`);
 }, 120);
