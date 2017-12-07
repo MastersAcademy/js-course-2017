@@ -1,0 +1,14 @@
+{
+  "name": "homework_1",
+  "version": "1.0.0",
+  "description": "First Homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "Hello"
+  },
+  "keywords": [
+    "GitHub"
+  ],
+  "author": "IvanBevza",
+  "license": "ISC"
+}
