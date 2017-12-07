@@ -30,6 +30,7 @@
   "dependencies": {
     "eslint": "^4.9.0",
     "husky": "^0.14.3",
+    "keypress": "^0.2.1",
     "lint-staged": "^4.3.0",
     "stylelint": "^8.2.0"
   }
