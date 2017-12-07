@@ -8,4 +8,5 @@ function freezeFactory (numeral) {
 }
   
 let frozen = freezeFactory(4); 
+
 frozen();
