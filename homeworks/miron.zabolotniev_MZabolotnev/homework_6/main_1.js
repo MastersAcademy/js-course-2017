@@ -20,11 +20,9 @@ rl.question("Enter amount: ", (am) => {
 
         let writeNum = writer(number);
 
-
         for (let i = 0; i < amount; i++) {
             writeNum();
         }
         rl.close();
     });
 });
-

@@ -13,14 +13,25 @@ const OBJECT = {
     else: "1234567890"
 }
 
-function writer(obj) {
-    for (let prop in obj) {
-        if (typeof obj[prop] === 'object') {
-            writer(obj[prop])
-        } else {
-            console.log( prop + " : " + obj[prop]);
+let finalObject = {};
+
+search(OBJECT);
+
+writer(finalObject);
+
+function search(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] === 'object') {
+            finalObject = obj[key];
+            search(obj[key])
         }
     }
 }
 
-writer(OBJECT);
+function writer(obj) {
+    for(let key in obj){
+        if(obj.hasOwnProperty(key)){
+            console.log(`${key} : ${obj[key]}`);
+        }
+    }
+}

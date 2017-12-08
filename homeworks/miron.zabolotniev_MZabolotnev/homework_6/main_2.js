@@ -10,7 +10,7 @@ rl.question("Enter amount: ", (am) => {
     rl.question("Enter salary: ", (sal) => {
         let salary = sal;
 
-        function magazineFactory (amount, salary) {
+        function shopFactory(amount, salary) {
             return {
                 amount : amount,
                 salary : salary,
@@ -20,11 +20,9 @@ rl.question("Enter amount: ", (am) => {
             };
         }
 
-        let magazine = magazineFactory(amount, salary);
-        console.log("Object: ", magazine);
-        console.log("Salary summ: ", magazine.salarySumm());
+        let shop = shopFactory(amount, salary);
+        console.log("Object: ", shop);
+        console.log("Salary summ: ", shop.salarySumm());
         rl.close();
     });
 });
-
-
