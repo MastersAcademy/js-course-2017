@@ -18,16 +18,16 @@ let data1 = {
     }
 }
 
-let rezult = {}
+let result = {}
 
 function getNestedField(obj){
     for(let key in obj){
         if (obj[key] == '[object Object]'){
-            rezult = obj[key];
+            result = obj[key];
             getNestedField(obj[key]);
         }
     }
-    return rezult;
+    return result;
 }
 
 console.log(getNestedField(data1));

@@ -1,17 +1,17 @@
-function funcFabricScore(amountOfWorkers, averageSalary){
+function GetObjectShop(amountOfWorkers, averageSalary){
     let allSalaryOfWorkers = 0;
     this.amountOfWorkers = amountOfWorkers;
     this.averageSalary = averageSalary;
     return  {
         amountOfWorkers,
         averageSalary,
-        getSelerySum: function(){
+        getAmountSalary: function(){
             return `Sum all workers: ${allSalaryOfWorkers = amountOfWorkers * averageSalary}`;
         }
     }
 }
 
-let magazineObject = new funcFabricScore (5, 1500);
+let shopObject = new GetObjectShop (5, 1500);
 
-console.log (magazineObject);
-console.log (magazineObject.getSelerySum());
+console.log (shopObject);
+console.log (shopObject.getAmountSalary());
