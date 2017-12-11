@@ -46,6 +46,3 @@ console.log(obj1(data));
 
 let obj2 = objectLogger();
 console.log(obj2(data1));
-
-
-
