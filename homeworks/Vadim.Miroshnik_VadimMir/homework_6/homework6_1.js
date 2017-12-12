@@ -1,12 +1,14 @@
+
+
 function freezeFactory (numeral) {
-    
+    let i = 0;
     return function (name = numeral) {
-        for (let i = 0; i < numeral; i ++){
-            console.log(numeral);
-        }
-    };   
+        i++;
+        if((i % name) == 0) console.log(name);  
+    };
 }
   
 let frozen = freezeFactory(4); 
-
-frozen();
+for (let i = 0; i < 12; i++) {
+    frozen();
+}
