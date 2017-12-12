@@ -20,6 +20,15 @@ let data1 = {
     }
 };
 
+let data2 = {
+    a : {
+        b : 2
+    },
+    c : {
+        d : 2
+    }
+};
+
 function objectLogger(obj) {
     if (objectLogger.maxDepth === undefined) {
         objectLogger.maxDepth = 0;
@@ -35,6 +44,8 @@ function objectLogger(obj) {
                 if (objectLogger.currentDepth > objectLogger.maxDepth) {
                     objectLogger.maxDepth = objectLogger.currentDepth;
                     objectLogger.deepestObj = Object.assign({}, obj[key]);
+                } else if (objectLogger.currentDepth === objectLogger.maxDepth) {
+                    Object.assign(objectLogger.deepestObj, obj[key]);
                 }
 
                 objectLogger(obj[key]);
@@ -43,6 +54,8 @@ function objectLogger(obj) {
     }
 
     if (objectLogger.currentDepth === 0) {
+        objectLogger.maxDepth = undefined;
+
         return objectLogger.deepestObj;
     } else {
         objectLogger.currentDepth--;
@@ -55,3 +68,4 @@ function isObject(o) {
 
 console.log(objectLogger(data));
 console.log(objectLogger(data1));
+console.log(objectLogger(data2));
