@@ -23,15 +23,24 @@ let data1 = {
     }
 };
 
+let obj = {
+    a: {
+        b: 2
+    },
+    c: {
+        d: 2
+    }
+};
 
 function objectLogger() {
-    let output;
+    let output = [];
     return function bypass(obj) {
+        let i = 0;
         for (let key in obj) {
             if (obj.hasOwnProperty(key)) {
                 if (typeof (obj[key]) === 'object') {
-                    //console.log(obj[key]);
-                    output = obj[key];
+                    output [i] = obj[key];
+                    ++i;
                     bypass(obj[key]);
                 }
             }
@@ -40,9 +49,17 @@ function objectLogger() {
     };
 }
 
-let obj1 = objectLogger();
-console.log(obj1(data));
+function print(array) {
+    for (let j = 0; j < array.length; j++) {
+        console.log(array[j]);
+    }
+}
 
+let obj1 = objectLogger();
+print(obj1(data));
 
 let obj2 = objectLogger();
-console.log(obj2(data1));
+print(obj2(obj));
+
+let obj3 = objectLogger();
+print(obj3(data1));
