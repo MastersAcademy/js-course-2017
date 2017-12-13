@@ -1,10 +1,8 @@
-var msecond = 0,
+let msecond = 0,
     second = 0,
     minute = 0;
 
-
 function add() {
-    
     msecond++
     if (msecond >= 1000) {
         msecond = 0;
@@ -20,7 +18,7 @@ function add() {
 };
 
 function timer() {
-    setInterval(add, 1000);
+    setInterval(add, 1);
 }
 
 timer();
