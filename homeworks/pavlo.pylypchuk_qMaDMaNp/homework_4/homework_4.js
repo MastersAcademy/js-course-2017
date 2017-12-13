@@ -6,19 +6,18 @@ let answer = [];
 
 for (let i = 0; i < a.length; i++) {
     b = a[i];
-    console.log(b)
-        (function Savers(chars) {
-            for (let i = 0; i < chars.length; i++) {
+    (function Savers(chars) {
+        for (let i = 0; i < chars.length; i++) {
 
-                if (b[i] == "m") {
-                    mSaver.push("1");
-                }
-
-                if (b[i] == "a") {
-                    aSaver.push("1");
-                }
+            if (b[i] == "m") {
+                mSaver.push("1");
             }
-        })(b);
+
+            if (b[i] == "a") {
+                aSaver.push("1");
+            }
+        }
+    })(b);
 
     (function Compare(mArg, aArg) {
         mLength = mArg.length;
