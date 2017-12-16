@@ -1,18 +1,30 @@
-function shopFactory(worker,averageSalary) {
-
+function ShopFactory(worker,averageSalary) {
     this.worker = worker;
     this.averageSalary = averageSalary;
-    this.getSalarySum = function () {
-        return worker * averageSalary;
-    };
-
+    this.getSalarySum = worker * averageSalary;
 }
 
-let value = new shopFactory(4,500);
+let value = new ShopFactory(4,500);
 
-console.log(value.worker,value.averageSalary,value.getSalarySum());
-
-
+console.log(value);
 
 
 
+
+
+function shopFactory(worker,averageSalary) {
+    return{
+        worker : worker,
+        averageSalary : averageSalary,
+        getSalarySum () {
+            return worker * averageSalary;
+        },
+
+        toStringView(){
+            return `${this.worker}, ${this.averageSalary}, ${this.getSalarySum()}`;
+        }
+    };
+}
+
+let value1 = shopFactory(4,500);
+console.log(value1.toStringView());
