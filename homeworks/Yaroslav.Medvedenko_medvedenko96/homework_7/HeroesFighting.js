@@ -66,8 +66,7 @@ function heroWin() {
 }
 
 function control() {
-    console.log('Welcome n - newGame, q - kick hero1, w - shot hero1, ' +
-        'o - kick hero2, p - shot hero2,e e - exit.');
+    console.log('Welcome n - newGame, q - kick hero1, w - shot hero1, o - kick hero2, p - shot hero2,e e - exit.');
     process.stdin.setRawMode(true);
     newGame();
     process.stdin.on('readable', () => {
