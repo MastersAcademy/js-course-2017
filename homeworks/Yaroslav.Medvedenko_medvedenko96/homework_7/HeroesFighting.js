@@ -1,11 +1,8 @@
 function Hero(nameHero, health) {
     this.nameHero = nameHero;
-    this.health = health;
+    this.health = health || 150;
     this.shotDamages = 15;
     this.kickDamages = 5;
-    if (health === undefined ) {
-        this.health = 150;
-    }
 }
 
 Hero.prototype = {
@@ -29,7 +26,7 @@ function SuperHero (nameHero, health) {
     this.kickDamages = 10;
 }
 
-SuperHero.prototype = Hero.prototype;
+SuperHero.prototype.__proto__ = Hero.prototype;
 
 let hero1 = {},
     hero2 = {};
