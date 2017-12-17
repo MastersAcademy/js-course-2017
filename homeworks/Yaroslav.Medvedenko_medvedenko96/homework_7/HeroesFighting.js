@@ -26,10 +26,10 @@ function SuperHero (nameHero, health) {
     this.kickDamages = 10;
 }
 
-SuperHero.prototype.__proto__ = Hero.prototype;
+SuperHero.prototype = Object.create(Hero.prototype);
 
-let hero1 = {},
-    hero2 = {};
+let hero1,
+    hero2;
 
 function getRandomHeroHealth() {
     return Math.floor(Math.random() * (50) + 100);
@@ -58,9 +58,11 @@ function newGame() {
 function heroWin() {
     if (hero1.health <= 0){
         console.log('victory the secondary hero');
+        console.log('hero health ' + hero1.health);
         process.exit(0);
     } else if (hero2.health <= 0){
         console.log('victory the first hero');
+        console.log('hero health ' + hero2.health);
         process.exit(0);
     }
 }
@@ -103,4 +105,3 @@ function control() {
 }
 
 control();
-
