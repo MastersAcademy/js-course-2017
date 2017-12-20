@@ -72,9 +72,43 @@ class Play {
             return new Hero(heroParameters);
         } else return new SuperHero(heroParameters);
     }
+
     checkHeroHealth(player) {
         if (player.health <= 0){
             return this.gameEnded = true;
+        }
+    }
+
+    playerKick(opponent1, opponent2) {
+        this.checkHeroHealth(opponent2);
+        if (!this.gameEnded) {
+            opponent1.kick(opponent2);
+            this.checkHeroHealth(opponent2);
+            this.endGameLog(opponent1, opponent2);
+        }
+    }
+
+    playerShot(opponent1, opponent2) {
+        this.checkHeroHealth(opponent2);
+        if (!this.gameEnded) {
+            opponent1.shot(opponent2);
+            this.checkHeroHealth(opponent2);
+            this.endGameLog(opponent1, opponent2);
+        }
+
+    }
+
+    endGameLog(opponent1, opponent2) {
+        let winner,
+            log;
+        if (this.gameEnded === true) {
+            opponent1.lifeCheck();
+            opponent2.lifeCheck();
+            opponent1.hasHealth ? (winner = opponent1) : winner = opponent2;
+            log = `Winner is ${winner.name} with ${winner.health} hp`;
+            console.log(log);
+            this.gameStarted = false;
+            this.gameEnded = false;
         }
     }
 }
@@ -96,28 +130,34 @@ process.stdin.on('keypress', (str, key) => {
     if (key.name === 'n' && game.gameStarted === false) {
         player1 = game.newRandomHero(heroParameters);
         player2 = game.newRandomHero(heroParameters);
-        game.newRandomHero(heroParameters);
+        game.gameStarted = true;
+        game.gameEnded = false;
     }
 
-    let player1HPcheck = player1.hasHealth === true,
-        player2HPcheck =player2.hasHealth === true;
-    if (key.name === 'q' && player1HPcheck && player2HPcheck) {
-        player1.kick(player2);
+    if (key.name === 'q') {
+        game.playerKick(player1, player2);
+        game.endGameLog(player1, player2);
     }
-
-    if (key.name === 'c') {
-        clearTimer();
+    if (key.name === 'w') {
+        game.playerShot(player1, player2);
+        game.endGameLog(player1, player2);
     }
-    if (key.name === 'p' && timerRun === true) {
-        pauseTimer();
+    if (key.name === 'p') {
+        game.playerKick(player2, player1);
+        game.endGameLog(player1, player2);
     }
-    if (key.name === 'r' && timerRun === false) {
-        restorePause();
+    if (key.name === 'r') {
+        game.playerShot(player2, player1);
+        game.endGameLog(player1, player2);
     }
 });
-console.log(`Press 'b' to begin timer
+console.log(`Press 'n' to start game
 Press 'ctrl + c' to exit
-Press 's' to stop
-Press 'c' to clear
-Press 'p' to pause
-Press 'r' to restore`);
+
+-- player 1 --
+Press 'q' to kick
+Press 'w' to shot
+
+-- player 2 --
+Press 'p' to kick
+Press 'o' to shot`);
