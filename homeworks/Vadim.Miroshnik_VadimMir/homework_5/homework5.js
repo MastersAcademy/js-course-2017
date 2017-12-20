@@ -29,13 +29,8 @@ function reset (timer){
 }
 
 function pause(){
-    if (i%2 === 0){
-        stop(); 
-    } 
-    
-    if (i%2 === 1) {
-        startTimer ();
-    }
+    if (i % 2 === 0) stop();   
+    if (i % 2 === 1) startTimer ();
 }    
 
 process.stdin.setRawMode ( true );
