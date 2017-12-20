@@ -17,7 +17,7 @@ function timer() {
     console.log (min + ':' + sec + '.' + msec);
 }
 function startTimer(){
-     timerId = setInterval(timer, 100);
+    timerId = setInterval(timer, 100);
 }
 
 function stop() {
@@ -38,7 +38,7 @@ function pause(){
     }
 }    
 
- process.stdin.setRawMode ( true );
+process.stdin.setRawMode ( true );
 process.stdin.on('readable', () => {
     const key = process.stdin.read();
 
@@ -47,26 +47,25 @@ process.stdin.on('readable', () => {
     const str = String(key);
 
     switch (str) {
-            case 'null':
-        console.log('tt');
+        case 'null':
             break;
-            case '1':
-        startTimer ();
+        case '1':
+            startTimer ();
             break;
-            case '2':
-           stop ();
+        case '2':
+            stop ();
             break;
-            case '3':
+        case '3':
             reset ();
             break;
-            case 'p':
+        case 'p':
             pause ();
             i ++;
             break;
-            case 'q':
+        case 'q':
             process.exit(0);
             break;
-            default:
+        default:
             console.log(str);
     }
 
