@@ -2,13 +2,18 @@
 let start = new Date ();
 let timerId;
 let i = 0;
+let y = 0;;
+let end = 0;
+let pauseTime = 0;
+let saveTime = 0;
 
 function timer() {
     console.clear();
-    let end = new Date ();
-    msec = Math.floor((end - start) % 1000);
-    sec = Math.floor((end - start)/1000) % 60;
-    min = Math.floor(((end - start) / 1000 / 60) % 60);
+    end = new Date ();
+    console.log(pauseTime);
+    msec = Math.floor(((end - start ) +  pauseTime) % 1000);
+    sec = Math.floor(((end - start) +  pauseTime )/1000) % 60;
+    min = Math.floor((((end  - start) +  pauseTime) / 1000 / 60) % 60);
     if (msec.toString().length === 1) msec = '00' + msec;
     if (msec.toString().length === 2) msec = '0' + msec;
     if (sec.toString().length === 1) sec = '0' + sec;
@@ -16,6 +21,7 @@ function timer() {
     console.log('This is help.Press p for pause, Press 2 for stop, Press 3 for reset, Press q for exit');
     console.log (min + ':' + sec + '.' + msec);
 }
+
 function startTimer(){
     timerId = setInterval(timer, 100);
 }
@@ -29,7 +35,11 @@ function reset (timer){
 }
 
 function pause(){
-    if (i % 2 === 0) stop();   
+    if (i % 2 === 0) stop();
+    if( y % 2 === 1){
+     saveTime = new Date ();  
+     pauseTime = pauseTime + (end - saveTime);
+    }
     if (i % 2 === 1) startTimer ();
 }    
 
@@ -56,6 +66,7 @@ process.stdin.on('readable', () => {
         case 'p':
             pause ();
             i ++;
+            y ++; 
             break;
         case 'q':
             process.exit(0);
