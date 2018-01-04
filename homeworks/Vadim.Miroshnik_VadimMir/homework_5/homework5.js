@@ -2,7 +2,7 @@
 let start = new Date ();
 let timerId;
 let i = 0;
-let y = 0;;
+let y = 0;
 let end = 0;
 let pauseTime = 0;
 let saveTime = 0;
