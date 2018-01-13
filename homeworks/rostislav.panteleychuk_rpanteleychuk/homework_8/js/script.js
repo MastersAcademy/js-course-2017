@@ -43,3 +43,6 @@ function soundClickO() {
     audio.src = 'sounds/tom.wav';
     audio.autoplay = true;
 }
+
+
+
