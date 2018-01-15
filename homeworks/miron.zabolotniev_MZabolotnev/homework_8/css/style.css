@@ -1,34 +1,34 @@
 body{
-    background-image: linear-gradient(to right top, #1e75d5, #a36cc0, #d36f9c, #df837e, #d59f76);
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+	background-image: linear-gradient(to right top, #1e75d5, #a36cc0, #d36f9c, #df837e, #d59f76);
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 .container{
-    width: auto;
+	width: auto;
 }
 .button{
-    background-color: lightskyblue;
-    display: inline-block;
-    margin: 5px;
-    padding: 1.7rem 2rem;
-    border: 0;
-    border-radius: 0.317rem;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 1.5;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -webkit-font-smoothing: antialiased;
+	background-color: lightskyblue;
+	display: inline-block;
+	margin: 5px;
+	padding: 1.7rem 2rem;
+	border: 0;
+	border-radius: 0.317rem;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1.5;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
 }
 .button:hover {
-    opacity: 0.85;
+	opacity: 0.85;
 }
 .button-pressed{
-    background-color: darkorange;
+	background-color: darkorange;
 }

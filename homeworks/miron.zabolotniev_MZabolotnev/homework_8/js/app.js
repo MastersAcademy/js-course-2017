@@ -1,23 +1,25 @@
-$(document).ready(function(){
-    $('body').keydown(function(eventObject){
-        if ( check(eventObject.key) ){
-            buttonPress(eventObject.key);
+(function () {
+    document.onkeydown = function key(event) {
+        if ( check(event.key) ){
+            buttonPress(event.key);
         }
-    });
-    $( "button" ).click(function(eventObject) {
-        if ( check(eventObject.target.id) ){
-            buttonPress(eventObject.target.id);
+    };
+    document.onclick = function button(event) {
+        if ( check(event.toElement.id) ){
+            buttonPress(event.toElement.id);
         }
-    });
-});
+    };
 
-function buttonPress(id) {
-    let sound = document.getElementById(`audio${id}`);
-    $(`#${id}`).css("background-color", "#db36a4");
-    sound.play();
-    setTimeout(() => $(`#${id}`).css("background-color", "lightskyblue"), 150);
-}
+    function buttonPress(id) {
+        let button = document.getElementById(id);
+        let sound = document.getElementById(`audio${id}`);
+        button.style.cssText = "background-color: #db36a4";
+        sound.currentTime = 0;
+        sound.play();
+        setTimeout(() => button.style.cssText = "background-color: lightskyblue", 150);
+    }
 
-function check(val) {
-    return /^[1-9]$/.test(val);
-}
+    function check(val) {
+        return /^[1-9]$/.test(val);
+    }
+})();
