@@ -1,5 +1,5 @@
 function itemActivation(e){
-    let allItems = document.querySelectorAll("div.items");
+    let allItems = document.querySelectorAll("button.items");
 
     function playAudio(srcSound){
         var audio = new Audio();
@@ -8,21 +8,20 @@ function itemActivation(e){
     }
 
     function clickActivation(element){
-            active = true;
-            element.classList.toggle('items-active');       
+            element.classList.toggle('items-active');
             setTimeout(function(){
-                element.classList.toggle('items-active');  
-            },100);    
+                element.classList.toggle('items-active');
+            },100);
     }
 
     switch(e.keyCode || e){
         case 113:
-        case "element1": 
+        case "element1":
             clickActivation(allItems[0]);
             playAudio("sounds/boom.wav");
             break;
         case 119:
-        case "element2": 
+        case "element2":
             clickActivation(allItems[1]);
             playAudio("sounds/clap.wav");
             break;
