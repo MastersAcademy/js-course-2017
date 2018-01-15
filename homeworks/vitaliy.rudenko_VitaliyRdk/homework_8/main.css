@@ -1,0 +1,37 @@
+body{
+    padding: 5%;
+    background: url(img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.container{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    background: #002535;
+    border-radius: 5%;
+    flex-wrap: wrap;
+}
+
+.items{
+    background: #4396ca;
+    width: 4%;
+    margin: 2%;
+    padding: 5%;
+    border-radius: 20%;
+    text-align: center;
+    font-size: 2vw;
+    border: 0.2vw solid black;
+}
+
+.items-active{
+    border: 0.2vw groove #df1c3a;
+    color: #df1c3a;
+}
+
+.line-break{
+    width: 100%;
+}
