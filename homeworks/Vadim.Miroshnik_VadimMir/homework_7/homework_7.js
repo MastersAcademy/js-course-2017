@@ -10,10 +10,10 @@ class Hero {
         this.kick = 5;
         this.shot = 15;  
     }
-    Kick(otherHero){
+    kickMethod(otherHero){
         otherHero.life -= this.kick;
     }
-    Shot(otherHero){
+    shotMethod(otherHero){
         otherHero.life -= this.shot;
     }
     getLifeValue(){
@@ -27,10 +27,10 @@ class SuperHero extends Hero{
         this.kick = 10;
         this.shot = 25;
     }
-    Kick(otherHero){
+    kickMethod(otherHero){
         otherHero.life -= this.kick;
     }
-    Shot(otherHero){
+    shotMethod(otherHero){
         otherHero.life -= this.shot;
     }
 }
@@ -79,22 +79,22 @@ process.stdin.on('readable', () => {
             start();
             break;
         case 'q':
-            hero.Kick(superHero);
+            hero.kickMethod(superHero);
             finish();
             console.log(`${hero.name} kick on ${hero.kick} from ${superHero.name} rest ${superHero.getLifeValue()}`);
             break;
         case 'w':
-            hero.Shot(superHero);
+            hero.shotMethod(superHero);
             finish();
             console.log(`${hero.name} shot on ${hero.shot} from ${superHero.name} rest ${superHero.getLifeValue()}`);  
             break;
         case 'o':
-            superHero.Kick(hero);
+            superHero.kickMethod(hero);
             finish(); 
             console.log(`${superHero.name} kick on ${superHero.kick} from ${hero.name} rest ${hero.getLifeValue()}`); 
             break;
         case 'p':
-            superHero.Shot(hero);
+            superHero.shotMethod(hero);
             finish(); 
             console.log(`${hero.name} shot on ${superHero.shot} from ${hero.name} rest ${hero.getLifeValue()}`);  
             break;
