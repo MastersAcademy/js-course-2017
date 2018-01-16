@@ -17,6 +17,7 @@ body {
 }
 
 .stop {
+  display: inline-block;
   padding: 0.1rem 1.5rem 0.2rem 1.5rem;
   background: #F77220;
   border-radius: 0.5rem;
@@ -50,7 +51,7 @@ body {
   border-radius: 0.5rem;
 }
 
-.item:hover, button:hover {
+.item:hover, .stop:hover {
   cursor: pointer;
 }
 
