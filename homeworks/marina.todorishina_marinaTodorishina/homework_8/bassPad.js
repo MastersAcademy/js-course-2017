@@ -68,7 +68,7 @@ function handleBtnClicks(e) {
     }
 
     for (let i = 0; i < 9; i++) {
-        if (e.key + '\n' + btns[i].name === btns[i].innerText) {
+        if (e.key.toLowerCase() + '\n' + btns[i].name === btns[i].innerText) {
             btns[i].classList.add('border-light');
             setTimeout(function () {
                 btns[i].classList.remove('border-light');
