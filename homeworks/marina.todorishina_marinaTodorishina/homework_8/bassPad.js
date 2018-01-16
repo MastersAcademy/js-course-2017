@@ -82,9 +82,9 @@ function handleMouseClicks(e) {
         sounds = document.querySelectorAll('audio');
 
     btns.forEach(function (val, key) {
-        val.addEventListener('onclick', function () {
+        // val.addEventListener('onclick', function () {
             sounds[key].play();
-        })
+        // })
     })
 
     e.currentTarget.classList.add('border-light');
