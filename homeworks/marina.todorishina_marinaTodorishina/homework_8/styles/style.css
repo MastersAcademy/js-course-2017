@@ -1,0 +1,29 @@
+body {
+  background-image: url(https://www.braumracing.com/wp-content/uploads/2014/12/Braum_Catalog_BG.jpg);
+  background-position: 100%;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 393px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+button {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  margin: 0 1px 1px 0;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.42);
+  padding: 10px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.border-light {
+  border: 2px solid yellow;
+  box-shadow: 0 0 3px 1px #feffaa;
+}

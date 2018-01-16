@@ -1,68 +1,109 @@
-function padAreaPattern() {
-    let html = `
-        <main id="main-content">
+let patterns = {
+    area: `
+        
         <article id="main-area" class="container">
             
-</article>
-</main>
-    `;
-
-    return ['padArea', html];
+        </article>`
 }
 
-function dataRenderer(pattern) {
-
+function dataRenderer() {
 
     this.render = function () {
-        if (pattern[0] === 'padArea') {
-            document.body.innerHTML = pattern[1];
+        document.getElementById('main-content').innerHTML = patterns.area;
 
-        }
+        let btns = generateBtns(),
+            mainArea = document.getElementById('main-area');
 
-        if (pattern[0] === 'btns') {
-            let btnName = generateBtns(),
-                btns = [],
-                mainArea = document.getElementById('main-area');
+        btns.forEach(function (item) {
+            mainArea.appendChild(item);
+        });
 
-            for (let i = 0; i < 6; i++) {
-                btns[i] = btnsPattern(btnName[i], i);
-            }
-            btns.forEach(function (item) {
-                mainArea.appendChild(item);
-            })
-        }
+        renderAudios();
     }
-
 }
 
-function btnsPattern(btnName, i) {
-    let btnKey = btnName.name,
-        html = `
-      <button name="${btnName[i]}">${btnKey[i]} ${btnName[i]}</button>`;
-
-    return html;
+function renderAudios() {
+    for (let i = 1; i <= 9; i++) {
+        let audio = document.createElement(`audio`);
+        audio.id = `audio-${i}`;
+        let source = document.createElement('source');
+        source.src = `sounds/${i}.mp3`;
+        source.type = 'audio/mpeg';
+        audio.appendChild(source);
+        document.body.appendChild(audio);
+    }
 }
 
 function generateBtns() {
     let btnsArr = [],
-        btn = document.createElement(button);
+        btn = '',
+        keys = ['q', 'w', 'e', 'a', 's', 'd', 'z', 'x', 'c'];
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 9; i++) {
+        btn = document.createElement('button');
         btn.name = 'b' + (i + 1);
+        btn.innerText = keys[i] + '\n' + btn.name;
+        setEvetListeners(btn);
         btnsArr[i] = btn;
     }
 
     return btnsArr;
 }
 
-function setEvetListeners(btns) {
-
+function setEvetListeners(btn) {
+    btn.onclick = function (event) {
+        handleMouseClicks(event);
+        handleBtnClicks(event);
+    }
 }
 
-function handleBtnClicks(btns) {
+function handleBtnClicks(e) {
 
+    let keysCodes = [81, 87, 69, 65, 83, 68, 90, 88, 67],
+        index = keysCodes.indexOf(e.keyCode),
+        btns = document.getElementsByTagName('button');
+
+    if (index !== -1) {
+        document.getElementById(`audio-${index + 1}`).play();
+    }
+
+    for (let i = 0; i < 9; i++) {
+        if (e.key + '\n' + btns[i].name === btns[i].innerText) {
+            btns[i].classList.add('border-light');
+            setTimeout(function () {
+                btns[i].classList.remove('border-light');
+            }, 500);
+        }
+    }
 }
 
-function handleMouseClicks(btns) {
+function handleMouseClicks(e) {
+    let btns = document.querySelectorAll('button'),
+        sounds = document.querySelectorAll('audio');
 
+    btns.forEach(function (val, key) {
+        val.addEventListener('onclick', function () {
+            sounds[key].play();
+        })
+    })
+
+    e.currentTarget.classList.add('border-light');
+
+    setTimeout(function () {
+        btns.forEach(function (val) {
+            val.classList.remove('border-light');
+        })
+    }, 500);
 }
+
+function init() {
+    let renderer = new dataRenderer();
+    renderer.render();
+
+    window.onkeydown = function (event) {
+        handleBtnClicks(event);
+    }
+}
+
+init();
+
