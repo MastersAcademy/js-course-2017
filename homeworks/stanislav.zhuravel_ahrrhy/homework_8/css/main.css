@@ -1,0 +1,43 @@
+body {
+  background: #555;
+}
+
+ul {
+  padding-left: 0;
+  text-align: center;
+}
+
+.section-title {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.btn-item {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.item-wrap {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2px;
+  border: 3px solid #000;
+  background-color: #FF7F50;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.item {
+  text-transform: uppercase;
+  display: block;
+  font: 600 1.3rem/1.5rem Roboto;
+}
+
+.item-index {
+  font: 400 .8rem/1.5rem Roboto;
+}
+
+.hidden {
+  display: none;
+}
