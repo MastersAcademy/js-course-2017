@@ -1,0 +1,21 @@
+.drumpad {
+    background-color: #9400D3;
+    width: 50%;
+    margin: 120px auto;
+    border: 1px solid black;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.button {
+    width: 24%;
+    border: 3px solid #4B0082;
+    display: inline-block;
+    height: 200px;
+    text-align: center;
+    margin: 5px;
+    font-size: 3vw;
+    background-color: #8A2BE2;
+    color: #FFFFFF;
+}
+
