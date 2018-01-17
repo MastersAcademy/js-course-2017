@@ -7,6 +7,7 @@ let drum1 = document.getElementById('drum1');
 drum1.onmousedown = function(event) {
     this.style.background = '#DC143C';
     this.style.border = '3px solid #FF0000';
+    cartoon();
 }
 
 drum1.onmouseup = function () {
@@ -24,6 +25,7 @@ let drum2 = document.getElementById('drum2');
 drum2.onmousedown = function(event) {
     this.style.background = '#DC143C';
     this.style.border = '3px solid #FF0000';
+    clap();
 }
 
 drum2.onmouseup = function () {
@@ -41,6 +43,7 @@ let drum3 = document.getElementById('drum3');
 drum3.onmousedown = function(event) {
     this.style.background = '#DC143C';
     this.style.border = '3px solid #FF0000';
+    hihat();
 }
 
 drum3.onmouseup = function () {
@@ -58,6 +61,7 @@ let drum4 = document.getElementById('drum4');
 drum4.onmousedown = function(event) {
     this.style.background = '#DC143C';
     this.style.border = '3px solid #FF0000';
+    kick();
 }
 
 drum4.onmouseup = function () {
@@ -75,6 +79,7 @@ let drum5 = document.getElementById('drum5');
 drum5.onmousedown = function(event) {
     this.style.background = '#DC143C';
     this.style.border = '3px solid #FF0000';
+    openhat();
 }
 
 drum5.onmouseup = function () {
@@ -92,6 +97,7 @@ let drum6 = document.getElementById('drum6');
 drum6.onmousedown = function(event) {
     this.style.background = '#DC143C';
     this.style.border = '3px solid #FF0000';
+    ride();
 }
 
 drum6.onmouseup = function () {
@@ -109,6 +115,7 @@ let drum7 = document.getElementById('drum7');
 drum7.onmousedown = function(event) {
     this.style.background = '#DC143C';
     this.style.border = '3px solid #FF0000';
+    snare();
 }
 
 drum7.onmouseup = function () {
@@ -126,6 +133,7 @@ let drum8 = document.getElementById('drum8');
 drum8.onmousedown = function(event) {
     this.style.background = '#DC143C';
     this.style.border = '3px solid #FF0000';
+    tink();
 }
 
 drum8.onmouseup = function () {
@@ -143,6 +151,7 @@ let drum9 = document.getElementById('drum9');
 drum9.onmousedown = function(event) {
     this.style.background = '#DC143C';
     this.style.border = '3px solid #FF0000';
+    tom();
 }
 
 drum9.onmouseup = function () {
