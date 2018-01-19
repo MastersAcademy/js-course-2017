@@ -45,7 +45,7 @@
 
                 let thisPos = this.$el.get(0).getBoundingClientRect();
 
-                let lastChildPos = e.target.children && e.target.children[e.target.children.length - 1].getBoundingClientRect();
+                let lastChildPos = e.target.children.length && e.target.children[e.target.children.length - 1].getBoundingClientRect();
 
                 if(lastChildPos.top - thisPos.bottom < 100){
                     this.getData()
