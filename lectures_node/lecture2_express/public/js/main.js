@@ -6,6 +6,11 @@
 
         this.$el = $('[data-laureates]');
 
+        this.config = {
+            start : 0,
+            count : 50
+        };
+
         this.initTpl();
 
         this.listenEvents();
@@ -34,14 +39,45 @@
                     lastName : '',
                     bornCountry : ''
                 }, 'create', this.addItem.bind(this));
-            })
+            });
+
+            this.$el.on('scroll', (e) => {
+
+                let thisPos = this.$el.get(0).getBoundingClientRect();
+
+                let lastChildPos = e.target.children && e.target.children[e.target.children.length - 1].getBoundingClientRect();
+
+                if(lastChildPos.top - thisPos.bottom < 100){
+                    this.getData()
+                }
+
+            });
+
+            $('#sort').on('change', (e) => {
+
+                if(e.target.value != 0){
+                    this.config.start = 0;
+                    this.config.query = decodeURIComponent(e.target.value);
+                    this.getData();
+                }
+            });
 
         },
 
         getData : function () {
 
-            $.get('/items')
+            let baseUrl = `/items?start=${this.config.start}&count=${this.config.count}`;
+
+            let url = this.config.query ? `${baseUrl}&${this.config.query}` : `${baseUrl}`;
+
+            if(this.config.start == 0){
+                this.empty();
+            }
+
+            $.get(url)
                 .done((response) => {
+
+                    this.config.start += this.config.count;
 
                     this.buildList(response);
 
@@ -57,6 +93,10 @@
 
             laureates.forEach(this.addItem.bind(this));
 
+        },
+
+        empty : function () {
+            this.$el.empty();
         },
 
         addItem : function (laureate) {

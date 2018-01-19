@@ -15,6 +15,13 @@
     <h1>This is a sample express api web-app</h1>
     <h2>Nobel Prize Laureates</h2>
     <button data-add>Add Laureate</button>
+    <select name="sort" id="sort">
+        <option value="0">Select sorting</option>
+        <option value="sort%3D%22lastName%22%26dir%3D%22asc%22">Last name, asc</option>
+        <option value="sort%3D%22lastName%22%26dir%3D%22desc%22">Last name, desc</option>
+        <option value="sort%3D%22bornCountry%22%26dir%3D%22asc%22">Born country, asc</option>
+        <option value="sort%3D%22bornCountry%22%26dir%3D%22desc%22">Born country, desc</option>
+    </select>
     <ul class="laureates-list" data-laureates>
         <li data-laureate>
             <div>

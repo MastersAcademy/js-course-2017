@@ -27,12 +27,16 @@ router.post('/', function (req, res) {
 
 router.put('/:id', function (req, res) {
 
-    let item = newItem;
+    let item = data.find(function (el) {
+        return el.id == req.params.id;
+    });
+
+    let index = data.indexOf(item);
 
     item.firstName = req.body.firstName;
     item.lastName = req.body.lastName;
     item.bornCountry = req.body.bornCountry;
-
+    data[index] = item;
     res.send(item);
 
 });

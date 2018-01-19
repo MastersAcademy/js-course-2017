@@ -31,7 +31,10 @@ h5 {
 }
 
 .laureates-list {
+  margin-top: 20px;
   padding-top: 10px;
+  max-height: 75vh;
+  overflow-y: scroll;
 }
 
 .popup-wrap {
