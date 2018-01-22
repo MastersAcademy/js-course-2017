@@ -1,0 +1,24 @@
+div {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+
+.closed {
+  background: #8B008B;
+  border: 1px solid #000;
+}
+
+.opened {
+  background: #FFF;
+  border: 1px solid #000;
+}
+
+.matched {
+  background: #FFF;
+  border: 1px solid #008000;
+}
+
+.hided {
+  opacity: 0;
+}
