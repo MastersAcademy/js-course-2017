@@ -16,7 +16,6 @@ router.get('/', function (req, res) {
 
     if (dir === 'asc') {
         if (sort === 'lastName' || 'bornCountry') {
-            console.log(`Sort ${sort} by asc`);
             data.sort(function (a, b) {
                 let collator = new Intl.Collator();
                 return collator.compare(a[sort], b[sort]);
@@ -26,7 +25,6 @@ router.get('/', function (req, res) {
 
     if (dir === 'desc') {
         if (sort === 'lastName' || 'bornCountry') {
-            console.log(`Sort ${sort} by desc`);
             data.sort(function (b, a) {
                 let collator = new Intl.Collator();
                 return collator.compare(a[sort], b[sort]);
@@ -34,18 +32,7 @@ router.get('/', function (req, res) {
         }
     }
 
-
-    if (start === 0) {
-        output = data.slice(start, end);
-        console.log('start = ' + start);
-        console.log('end = ' + end);
-    } else {
-        ++start;
-        output = data.slice((start), (end));
-        console.log('start = ' + start);
-        console.log('end = ' + end);
-    }
-
+    output = data.slice(start, end);
     res.json(output);
 
 });

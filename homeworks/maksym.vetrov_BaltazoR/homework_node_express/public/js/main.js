@@ -33,6 +33,8 @@
 
         listenEvents : function () {
 
+            let self = this;
+
             this.addBtn.on('click', () => {
                 popup.show({
                     firstName : '',
@@ -41,17 +43,17 @@
                 }, 'create', this.addItem.bind(this));
             });
 
-            this.$el.on('scroll', (e) => {
+            this.$el.on('scroll', freeze(300, function (e)  {
 
-                let thisPos = this.$el.get(0).getBoundingClientRect();
+                let thisPos = self.$el.get(0).getBoundingClientRect();
 
                 let lastChildPos = e.target.children.length && e.target.children[e.target.children.length - 1].getBoundingClientRect();
 
                 if(lastChildPos.top - thisPos.bottom < 100){
-                    this.getData()
+                    self.getData()
                 }
 
-            });
+            }));
 
             $('#sort').on('change', (e) => {
 
@@ -66,6 +68,10 @@
 
         getData : function () {
 
+            if(this.loading){
+                return;
+            }
+
             let baseUrl = `/items?start=${this.config.start}&count=${this.config.count}`;
 
             let url = this.config.query ? `${baseUrl}&${this.config.query}` : `${baseUrl}`;
@@ -74,8 +80,12 @@
                 this.empty();
             }
 
+            this.loading = true;
+
             $.get(url)
                 .done((response) => {
+
+                    this.loading = false;
 
                     this.config.start += this.config.count;
 
@@ -84,8 +94,9 @@
                 })
 
                 .fail(function (err) {
+                    this.loading = false;
                     console.dir(err);
-                });
+                }.bind(this));
 
         },
 
@@ -258,6 +269,20 @@
     popup =  new LaureatePopup();
 
     new LaureatesList();
+
+    function freeze (delay, fnc){
+        let timeout;
+        return function () {
+            let args = arguments;
+            if(timeout){
+                clearTimeout(timeout);
+            }
+            timeout = setTimeout(function () {
+                fnc.apply(this, args);
+                timeout = null;
+            }.bind(this), delay);
+        }
+    }
 
 })(jQuery);
 
