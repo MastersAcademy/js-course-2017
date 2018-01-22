@@ -5,8 +5,10 @@ let itemLabel = document.getElementsByClassName('item'),
 
 function setSoundOnclick(){
     let id = this.id,
+        btn = document.getElementById(id),
         sound = playList[id],
         player = document.getElementById('audio');
+    btn.classList.add('active');
     player.setAttribute('src', sound);
     player.play();
 }
@@ -15,6 +17,7 @@ function playOnKey(event) {
     let keyCode = event.code.slice(3).toLowerCase(),
         player = document.getElementById('audio'),
         id,
+        btn,
         sound;
     btnNames.map( (elem) => {
         return elem.toLowerCase();
@@ -22,6 +25,8 @@ function playOnKey(event) {
     let pressedBtnIndex = btnNames.indexOf(keyCode);
     if (pressedBtnIndex !== -1) {
         id = pressedBtnIndex;
+        btn = document.getElementById(id);
+        btn.classList.add('active');
         sound = playList[id];
         player.setAttribute('src', sound);
         player.play();
@@ -40,13 +45,28 @@ function setContent(itemLabelList) {
         return (' ' + el.className + ' ').indexOf(' ' + className + ' ') > -1;
     };
 
-    doc.addEventListener('click', (e) => {
+    doc.addEventListener('mousedown', (e) => {
         if (hasClass(e.target, 'item-wrap')){
             setSoundOnclick.call(e.target, e);
         }
     });
     doc.addEventListener('keydown', (e) => {
         playOnKey.call(e.target, e);
+    });
+
+    doc.addEventListener('keyup', () => {
+        let keyCode = event.code.slice(3).toLowerCase(),
+            pressedBtnIndex = btnNames.indexOf(keyCode),
+            id,
+            btn;
+        if (pressedBtnIndex !== -1) {
+            id = pressedBtnIndex;
+            btn = document.getElementById(id);
+            btn.classList.remove('active');
+        }
+    });
+    doc.addEventListener('mouseup', (e) => {
+        e.target.classList.remove('active');
     });
 
 })(document);
