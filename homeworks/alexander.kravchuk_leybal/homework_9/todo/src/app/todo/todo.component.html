@@ -1,0 +1,16 @@
+<div class="declined" *ngIf="task.state == state.DECLINED"></div>
+<div class="waiting" *ngIf="task.state == state.WAITING">
+    <p>Id: {{task.id}} <span class="favorite" *ngIf="task.favorite"></span></p>
+    <p>Description: {{task.description}}</p>
+    <p>State: WAITING</p>
+</div>
+<div class="in_the_process" *ngIf="task.state == state.IN_THE_PROCESS">
+    <p>Id: {{task.id}} <span class="favorite" *ngIf="task.favorite"></span></p>
+    <p>Description: {{task.description}}</p>
+    <p>State: IN_THE_PROCESS</p>
+</div>
+<div class="completed" *ngIf="task.state == state.COMPLETED">
+    <p>Id: {{task.id}} <span class="favorite" *ngIf="task.favorite"></span></p>
+    <p>Description: {{task.description}}</p>
+    <p>State: COMPLETED</p>
+</div>
