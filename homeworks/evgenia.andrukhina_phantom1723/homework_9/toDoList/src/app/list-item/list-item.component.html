@@ -1,0 +1,4 @@
+<div class="waiting" *ngIf="listItem.state == state.WAITING">{{listItem.task}}</div>
+<div class="process" *ngIf="listItem.state == state.IN_THE_PROCESS">{{listItem.task}}</div>
+<div class="completed" *ngIf="listItem.state == state.COMPLETED">{{listItem.task}}</div>
+<div class="declined" *ngIf="listItem.state == state.DECLINED">{{listItem.task}}</div>
