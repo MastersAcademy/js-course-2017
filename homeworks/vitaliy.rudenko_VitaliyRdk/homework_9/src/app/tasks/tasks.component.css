@@ -1,0 +1,13 @@
+.div-task-items {
+  padding-left: 1%;
+  float: left;
+}
+
+.disable-task{
+  display: none;
+}
+
+.format-task{
+  text-align: center;
+}
+
