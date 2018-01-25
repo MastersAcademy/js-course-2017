@@ -4,16 +4,6 @@ let data = require('../models/static-data');
 
 let fakeId = 12345677;
 
-function doRequest(req) {
-
-
-
-
-
-    // console.log(result);
-    console.log('-----------------');
-    return result;
-}
 
 router.get('/', function (req, res) {
     let reqObj = Object.assign({}, req.query);
