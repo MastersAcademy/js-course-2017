@@ -1,0 +1,38 @@
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.task{
+  border-radius: 5px;
+  margin: 5px;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  background-color: lavender;
+  justify-content: center;
+}
+.column1{
+  color: lightslategrey;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.column{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.completed{
+  color: #00805c;
+}
+.process{
+  color: #b4af00;
+}
+.waiting{
+  color: #b41f12;
+}
+.declined{
+  color: snow;
+}
+
+
