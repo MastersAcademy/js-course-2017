@@ -39,7 +39,7 @@ router.get('/', function (req, res) {
     let end = parseInt(start + parseInt(req.query.count));
     let result;
 
-    if (sort === 'lastName' || 'bornCountry') {
+    if ((sort === 'lastName') || (sort === 'bornCountry')) {
         data.sort(compare(sort,dir));
     }
 
