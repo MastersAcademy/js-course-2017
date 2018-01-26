@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let listItem of listItems">
+        <app-list [listItem]="listItem" (click)="changeState(listItem)"></app-list>
+        <button (click)="deleteItem(listItem)">x</button>
+        <button (click)="makeFavorite($event)">&hearts;</button>
+    </li>
+</ul>

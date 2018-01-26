@@ -1,0 +1,13 @@
+ul {
+  list-style: none;
+}
+
+li {
+  cursor: pointer;
+  display: flex;
+  margin: 10px;
+}
+
+.favorited {
+  background-color: #F00;
+}

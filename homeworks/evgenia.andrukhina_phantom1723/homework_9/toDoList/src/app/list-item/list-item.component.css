@@ -1,0 +1,16 @@
+.waiting {
+  background-color: #55B4F3;
+}
+
+.process {
+  background-color: #C06AFA;
+}
+
+.completed {
+  background-color: #0F0;
+  text-decoration: line-through;
+}
+
+.declined {
+  display: none;
+}
