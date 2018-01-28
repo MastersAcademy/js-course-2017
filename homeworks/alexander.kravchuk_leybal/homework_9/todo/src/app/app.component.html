@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let task of toDos">
+        <app-todo [task]="task" (action)="handleAction($event)"></app-todo>
+    </li>
+</ul>
+
+<router-outlet></router-outlet>
