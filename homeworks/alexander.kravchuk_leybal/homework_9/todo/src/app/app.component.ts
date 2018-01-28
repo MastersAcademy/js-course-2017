@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import { ToDoList } from './models/toDoList';
-import { ToDo, State } from './toDoInterface';
+import {ToDoList} from './models/toDoList';
+import {ToDo, State} from './toDoInterface';
 
 @Component({
   selector: 'app-root',
@@ -18,15 +18,23 @@ export class AppComponent {
 
   private init() {
     this.toDoList = new ToDoList();
-
     this.toDos = this.toDoList.getTasks();
   }
 
-  changeState(task: ToDo) {
-    if (task.state < 3){
-      task.state++;
-    } else if (task.state === 3) {
-      task.state = 0;
+  handleAction(data) {
+    switch (data.type) {
+      case 'STATUS_CHANGED': {
+        this.toDoList.changeState(data.task);
+        break;
+      }
+      case 'FAVORITE_CHANGED': {
+        this.toDoList.changeFavorite(data.task);
+        break;
+      }
+      case 'STATUS_DECLINE': {
+        this.toDoList.declineTask(data.task);
+        break;
+      }
     }
   }
 }
