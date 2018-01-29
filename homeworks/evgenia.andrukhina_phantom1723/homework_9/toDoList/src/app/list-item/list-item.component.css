@@ -14,3 +14,7 @@
 .declined {
   display: none;
 }
+
+.favorite {
+  background: #F00;
+}

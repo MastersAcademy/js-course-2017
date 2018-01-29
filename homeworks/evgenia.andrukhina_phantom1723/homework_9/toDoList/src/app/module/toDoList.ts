@@ -7,12 +7,25 @@ export class List {
         this.listItems = this.generateItems(list);
     }
 
-    generateItems(list) {
+    changeFavorite (listItem: ListItem) {
+        listItem.favorite = !listItem.favorite;
+    }
 
+    deleteItem(listItem: ListItem) {
+        listItem.state = State.DECLINED;
+    }
+
+    changeState(listItem: ListItem) {
+        if (listItem.state < 2) {
+            listItem.state++;
+        }
+    }
+
+
+    generateItems(list) {
         const listItems = [];
 
         for (const item of list) {
-            let state = item.state;
 
             function getState() {
                 if (item.state === 'WAITING') {
@@ -25,14 +38,17 @@ export class List {
                     return State.COMPLETED;
                 }
             }
-
             listItems.push({
                 id: item.id,
                 task: item.task,
+                favorite: item.favorite,
                 state: getState()
             });
+
         }
 
         return listItems;
     }
+
+
 }

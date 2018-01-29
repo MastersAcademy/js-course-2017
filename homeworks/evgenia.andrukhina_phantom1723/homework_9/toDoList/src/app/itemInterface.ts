@@ -1,6 +1,7 @@
 export interface ListItem {
     id: string,
     task: string,
+    favorite: boolean,
     state: State
 }
 export enum State {

@@ -15,28 +15,21 @@ export class AppComponent {
 
     constructor() {
         this.init();
-        console.log(this.list);
     }
 
-    changeState(listItem: ListItem) {
-        if (listItem.state < 2) {
-            listItem.state++;
+
+    handleAction(data) {
+        switch (data.type) {
+            case 'FAVORITE':
+                this.list.changeFavorite(data.listItem);
+                break;
+            case 'DELETE':
+                this.list.deleteItem(data.listItem);
+                break;
+            case 'CHANGE_STATE':
+                this.list.changeState(data.listItem);
+                break;
         }
-    }
-
-    deleteItem(listItem: ListItem) {
-
-        for (let i = 0; i < this.list.listItems.length; i++) {
-            if (this.list.listItems[i] === listItem) {
-                this.list.listItems.splice(i, 1);
-            }
-        }
-
-        listItem.state = State.DECLINED;
-    }
-
-    makeFavorite(event) {
-        event.target.parentNode.className = 'favorited';
     }
 
     private init() {
@@ -44,16 +37,19 @@ export class AppComponent {
             {
                 id: '1',
                 task: 'learn Angular',
+                favorite: true,
                 state: 'WAITING'
             },
             {
                 id: '2',
                 task: 'watch TV',
+                favorite: true,
                 state: 'COMPLETED'
             },
             {
                 id: '3',
                 task: 'work',
+                favorite: true,
                 state: 'IN_THE_PROCESS'
             }
         ]);
