@@ -1,3 +1,19 @@
-<p>
-  todo works!
-</p>
+<div class="menu">
+  <h2>
+    All tasks
+  </h2>
+
+  <p class="task-preview">
+    <span>{{inputText}}</span>
+  </p>
+
+  <p class="add-task">
+    <input type="text" placeholder="task name..." class="task-input" [(ngModel)]="inputText">
+    <input type="submit" class="add-btn" [value] = "btnText">
+  </p>
+</div>
+
+
+<ol>
+  <li *ngFor="let task of tasks">{{task}}</li>
+</ol>

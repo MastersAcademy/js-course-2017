@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
+  tasks = ['Ride on a bike', 'Programming', 'Draw'];
+  btnText: string = 'Add task';
+  inputText: string = '';
+
   constructor() { }
 
   ngOnInit() {
