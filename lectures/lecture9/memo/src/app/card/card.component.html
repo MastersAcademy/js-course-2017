@@ -1,0 +1,4 @@
+<div class="closed" *ngIf="card.state == state.CLOSED"></div>
+<div class="opened" *ngIf="card.state == state.OPENED">{{card.id}}</div>
+<div class="matched" *ngIf="card.state == state.MATCHED">{{card.id}}</div>
+<div class="hided" *ngIf="card.state == state.HIDED"></div>
