@@ -1,0 +1,18 @@
+{
+    "name": "lecture3_requests",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "request": "^2.83.0",
+        "axios": "^0.17.1",
+        "superagent": "^3.8.2",
+        "got": "^8.0.3",
+        "node-fetch": "^1.7.3"
+    }
+}

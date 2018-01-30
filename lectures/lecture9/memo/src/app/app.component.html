@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let card of cards">
+    <app-card [card]="card" (click)="flipCard(card)"></app-card>
+  </li>
+</ul>

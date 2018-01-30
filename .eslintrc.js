@@ -15,8 +15,8 @@ module.exports = {
             }
         ],
         'linebreak-style': ['error', 'unix'],
-        quotes: ['error', 'single'],
-        semi: ['error', 'always'],
+        // quotes: ['error', 'single'],
+        // semi: ['error', 'always'],
         'no-undef': 'off',
         'no-unused-vars': ['error', { vars: 'local' }],
 
@@ -31,7 +31,7 @@ module.exports = {
         'guard-for-in': 'error',
         'no-loop-func': 'error',
         'no-self-compare': 'error',
-        'no-use-before-define': 'error',
+        // 'no-use-before-define': 'error',
         'no-unneeded-ternary': 'error'
     }
 };
