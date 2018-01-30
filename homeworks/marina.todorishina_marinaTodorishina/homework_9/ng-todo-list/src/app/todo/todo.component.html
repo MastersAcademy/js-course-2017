@@ -18,6 +18,7 @@
     {{task.name}}
     <input type="button" class="btn change-status-btn" value={{task.status}}
            (click)="changeTaskStatus($event, task)">
-    <input type="button" class="btn decline-btn" value={{declineBtnText}}>
+    <input type="button" class="btn decline-btn" value={{declineBtnText}}
+           (click)=" declineOfTask($event, task)">
   </li>
 </ol>
