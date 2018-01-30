@@ -11,6 +11,7 @@ export class TodoComponent implements OnInit {
   tasks = ['Ride on a bike', 'Programming', 'Draw'];
   btnText: string = 'Add task';
   inputText: string = '';
+  statusBtnText: string = 'OPEN';
 
   constructor() { }
 
@@ -19,9 +20,33 @@ export class TodoComponent implements OnInit {
   }
 
   addTask() {
+    if (!this.inputText){
+      return alert('Write name of task');
+    }
     this.tasks.push(this.inputText);
     this.inputText = '';
     this.taskCount = this.tasks.length;
+  }
+
+  changeTaskStatus(e){
+    // console.log(e.target.value);
+
+    if(e.target.value == 'OPEN'){
+    e.target.value = 'WAITING';
+      e.target.style.backgroundColor = 'gray';
+
+    } else if(e.target.value == 'WAITING'){
+      e.target.value = 'IN_THE_PROCESS';
+      e.target.style.backgroundColor = '#ffc529';
+
+    } else if (e.target.value == 'IN_THE_PROCESS') {
+      e.target.value = 'COMPLETED';
+      e.target.style.backgroundColor = 'green';
+
+    } else {
+      e.target.value = 'OPEN';
+      e.target.style.backgroundColor = 'red';
+    }
   }
 
 }

@@ -9,11 +9,14 @@
 
   <p class="add-task">
     <input type="text" placeholder="task name..." class="task-input" [(ngModel)]="inputText">
-    <input type="submit" class="add-btn" [value] = "btnText" (click)="addTask()">
+    <input type="submit" class="btn add-btn" [value]="btnText" (click)="addTask()">
   </p>
 </div>
 
-
 <ol>
-  <li *ngFor="let task of tasks">{{task}}</li>
+  <li *ngFor="let task of tasks" class="task">
+    {{task}}
+    <input type="button" class="btn change-status-btn" value={{statusBtnText}}
+           (click)="changeTaskStatus($event)">
+  </li>
 </ol>
