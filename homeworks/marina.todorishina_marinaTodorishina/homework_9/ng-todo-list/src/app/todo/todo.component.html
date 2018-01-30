@@ -14,9 +14,10 @@
 </div>
 
 <ol>
-  <li *ngFor="let task of tasks" class="task">
-    {{task}}
-    <input type="button" class="btn change-status-btn" value={{statusBtnText}}
-           (click)="changeTaskStatus($event)">
+  <li *ngFor="let task of tasks" id="{{task.id}}" class="task">
+    {{task.name}}
+    <input type="button" class="btn change-status-btn" value={{task.status}}
+           (click)="changeTaskStatus($event, task)">
+    <input type="button" class="btn decline-btn" value={{declineBtnText}}>
   </li>
 </ol>

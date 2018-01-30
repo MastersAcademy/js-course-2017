@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Tasks} from "./tasks-list";
 
 @Component({
   selector: 'app-todo',
@@ -7,44 +8,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  taskCount: number = 0;
-  tasks = ['Ride on a bike', 'Programming', 'Draw'];
+  tasks = Tasks;
   btnText: string = 'Add task';
   inputText: string = '';
-  statusBtnText: string = 'OPEN';
+  declineBtnText: string = 'DECLINE';
+  lastId = this.tasks[this.tasks.length-1].id;
 
   constructor() { }
 
   ngOnInit() {
-    this.taskCount = this.tasks.length;
   }
 
   addTask() {
+    let taskName =  this.inputText;
+
     if (!this.inputText){
       return alert('Write name of task');
     }
-    this.tasks.push(this.inputText);
+
+    this.lastId += 1;
+
+    this.tasks.push({
+        id: this.lastId, name: taskName ,status: 'OPEN'
+    });
     this.inputText = '';
-    this.taskCount = this.tasks.length;
   }
 
-  changeTaskStatus(e){
-    // console.log(e.target.value);
+  changeTaskStatus(e, task){
 
-    if(e.target.value == 'OPEN'){
-    e.target.value = 'WAITING';
+    if(task.status == 'OPEN'){
+      task.status = 'WAITING';
       e.target.style.backgroundColor = 'gray';
 
-    } else if(e.target.value == 'WAITING'){
-      e.target.value = 'IN_THE_PROCESS';
+    } else if(task.status == 'WAITING'){
+      task.status = 'IN_THE_PROCESS';
       e.target.style.backgroundColor = '#ffc529';
 
-    } else if (e.target.value == 'IN_THE_PROCESS') {
-      e.target.value = 'COMPLETED';
+    } else if (task.status == 'IN_THE_PROCESS') {
+      task.status = 'COMPLETED';
       e.target.style.backgroundColor = 'green';
 
     } else {
-      e.target.value = 'OPEN';
+      task.status = 'OPEN';
       e.target.style.backgroundColor = 'red';
     }
   }
