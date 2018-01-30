@@ -1,0 +1,152 @@
+li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #EEE;
+  font-size: 18px;
+  transition: .2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-style: solid;
+  border-width: 2px 4px;
+  border-color: rgb(255, 255, 255);
+}
+
+.completed {
+  background: rgb(154, 205, 50);
+  color: rgb(255, 255, 255);
+  text-decoration: line-through;
+}
+
+.completed:hover {
+  transform: scale(.99);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  transition: .5s all;
+}
+
+
+.completed:before {
+  content: "";
+  position: absolute;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 37%;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.inProcess {
+  background: rgb(228, 126, 0);
+  color: #FFF;
+}
+
+.inProcess:hover {
+  background: rgb(254, 185, 20);
+  transform: scale(.99);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  transition: .5s all;
+}
+
+
+.inProcess:before {
+  content: "";
+  position: absolute;
+  border-color: #FFF;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50px;
+  top: 37%;
+  left: 10px;
+  transform: rotate(1deg);
+  height: 15px;
+  width: 15px;
+}
+
+.waiting {
+  background: rgb(3, 96, 120);
+  color: #FFF;
+}
+
+.waiting:hover {
+  background: rgb(0, 196, 244);
+  transform: scale(.99);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  transition: .5s all;
+}
+
+
+.waiting:before, .waiting:after {
+  content: "";
+  position: absolute;
+  top: 41%;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px 50px 0;
+  transform: rotate(-45deg);
+}
+
+.waiting:after {
+  left: 17px;
+  transform: rotate(135deg);
+}
+
+.declined {
+  background: rgb(128, 128, 128);
+  color: #FFF;
+  display: none;
+  pointer-events: none;
+  cursor: default;
+}
+
+.declined:hover {
+  background: rgb(91, 91, 91);
+  transform: scale(.99);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  transition: .5s all;
+}
+
+
+.declined:before, .declined:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 20px;
+  top: 37%;
+  width: 2px;
+  background-color: rgb(255, 0, 0);
+}
+
+.declined:before {
+  transform: rotate(45deg);
+}
+
+.declined:after {
+  transform: rotate(-45deg);
+}
+
+button {
+  position: absolute;
+  right: 30px;
+  top: 29px;
+}
+
+.star-five {
+  top: 16px;
+  right: 200px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  text-shadow: -1px 0 rgb(0, 0, 0), 0 4px rgb(0, 0, 0), -3px 0 rgb(0, 0, 0), 0 -2px rgb(0, 0, 0);
+}
+
+.starAdd {
+  color: rgb(255, 215, 0);
+  text-shadow: -1px 0 rgb(0, 0, 0), 0 4px rgb(0, 0, 0), -3px 0 rgb(0, 0, 0), 0 -2px rgb(0, 0, 0);
+}
