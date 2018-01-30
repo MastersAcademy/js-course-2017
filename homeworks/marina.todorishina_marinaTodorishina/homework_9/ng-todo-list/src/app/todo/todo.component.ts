@@ -12,6 +12,7 @@ export class TodoComponent implements OnInit {
   btnText: string = 'Add task';
   inputText: string = '';
   declineBtnText: string = 'DECLINE';
+  addToFavoriteBtnText: string = 'Add to favorite';
   lastId = this.tasks[this.tasks.length - 1].id;
   declined = [];
 
@@ -31,8 +32,12 @@ export class TodoComponent implements OnInit {
     this.lastId += 1;
 
     this.tasks.push({
-      id: this.lastId, name: taskName, status: 'OPEN'
+      id: this.lastId,
+      name: taskName,
+      status: 'OPEN',
+      favorite: false
     });
+
     this.inputText = '';
   }
 
@@ -60,6 +65,28 @@ export class TodoComponent implements OnInit {
     task.status = 'DECLINED';
     this.declined.push(task);
     e.target.parentNode.remove();
+  }
+
+  addToFavorite (e, task){
+    if (task.favorite == 'false'){
+
+      task.favorite = 'true';
+      e.target.style.backgroundColor = 'yellow';
+      e.target.parentNode.style.backgroundColor = 'yellow';
+      e.target.style.color = 'brown';
+      console.log(task.favorite);
+      e.target.value = 'Remove from favorite';
+
+    } else {
+
+      task.favorite = 'false';
+      e.target.style.backgroundColor = '#fff';
+      e.target.style.color = '#000';
+      e.target.parentNode.style.backgroundColor = 'transparent';
+      console.log(task.favorite);
+      e.target.value = 'Add to favorite';
+    }
+
   }
 
 

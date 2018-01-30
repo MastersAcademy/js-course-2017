@@ -20,5 +20,7 @@
            (click)="changeTaskStatus($event, task)">
     <input type="button" class="btn decline-btn" value={{declineBtnText}}
            (click)=" declineOfTask($event, task)">
+    <input type="button" class="btn add-to-favorite-btn" value={{addToFavoriteBtnText}}
+           (click)="addToFavorite($event, task)">
   </li>
 </ol>
