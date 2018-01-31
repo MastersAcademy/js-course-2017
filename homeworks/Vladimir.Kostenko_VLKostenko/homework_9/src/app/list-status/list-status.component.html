@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-m12">
+      <div class="card horizontal">
+        <div class="card-stacked">
+          <div class="card-content" [ngClass]="{'teal lighten-1': list.doneTask}">
+            <h5>{{list.name}}</h5>
+            <p>{{list.description}}</p>
+            <button (click)="onDone()" class="btn-floating btn-large waves-effect waves-light" [disabled]="list.doneTask"><i class="material-icons">check</i></button>
+            <button (click)="onDelete()" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></button>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>

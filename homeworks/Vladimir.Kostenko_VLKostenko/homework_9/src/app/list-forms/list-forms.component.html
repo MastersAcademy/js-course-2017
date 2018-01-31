@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <form class="col m12">
+        <div class="input-field col s4">
+            <input placeholder="Name Task" type="text" id="task-name" class="validate" [(ngModel)]="taskName" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="input-field col s4">
+            <input placeholder="About Task" type="text" id="task-Description" class="validate" [(ngModel)]="taskDescription" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="col s4">
+          <button class="waves-effect waves-light btn-large" (click)="onAdd()">Add Task</button>
+        </div>
+    </form>
+  </div>
+</div>
