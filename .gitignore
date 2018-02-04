@@ -61,3 +61,6 @@ typings/
 
 #IDE config
 .idea
+
+karma.conf.js
+protractor.conf.js

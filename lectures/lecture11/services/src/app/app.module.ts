@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CardModule } from './card/card.module';
+import { HttpClientModule } from '@angular/common/http';
+import { LoggerService, PostsService } from './services';
 
 
 @NgModule({
@@ -11,9 +12,12 @@ import { CardModule } from './card/card.module';
   ],
   imports: [
     BrowserModule,
-    CardModule
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    LoggerService,
+    PostsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
