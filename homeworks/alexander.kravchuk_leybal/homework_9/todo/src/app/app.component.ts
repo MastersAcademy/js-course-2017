@@ -2,18 +2,27 @@ import {Component} from '@angular/core';
 
 import {ToDoList} from './models/toDoList';
 import {ToDo, State} from './toDoInterface';
+import {UserService} from "./user.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [UserService]
 })
 export class AppComponent {
   toDoList: ToDoList;
   toDos: Array<ToDo>;
+  users = [];
 
-  constructor() {
+  constructor(private userService: UserService) {
     this.init();
+  }
+
+  ngOnInit() {
+    this.userService.getUsers().subscribe(users => {
+      return this.users = users;
+    });
   }
 
   private init() {

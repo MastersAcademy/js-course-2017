@@ -3,5 +3,11 @@
         <app-todo [task]="task" (action)="handleAction($event)"></app-todo>
     </li>
 </ul>
+<br/>
+<ul>
+  <li *ngFor="let user of users">
+    <app-user [user]="user" ></app-user>
+  </li>
+</ul>
 
 <router-outlet></router-outlet>
