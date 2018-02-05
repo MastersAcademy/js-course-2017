@@ -1,0 +1,32 @@
+div {
+  margin: 15px 10px;
+  padding: 5px;
+}
+
+.waiting {
+  background: #ffedb7;
+}
+
+.in_the_process {
+  background: #afc4ed;
+}
+
+.completed {
+  background: #d3d3d3;
+}
+
+.declined {
+  opacity: 0;
+  display: none;
+}
+
+.favorite {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  top: 2px;
+  background: url("http://icons.iconarchive.com/icons/aha-soft/multimedia/256/favourites-star-SH-icon.png");
+  background-size: contain;
+}

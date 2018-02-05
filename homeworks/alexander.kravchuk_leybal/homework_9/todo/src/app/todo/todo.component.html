@@ -1,0 +1,31 @@
+<div class="declined" *ngIf="task.state == state.DECLINED"></div>
+<div class="waiting" *ngIf="task.state == state.WAITING">
+    <p>Id: {{task.id}} <span class="favorite" *ngIf="task.favorite"></span></p>
+    <p>Description: {{task.description}}</p>
+    <p>State: WAITING</p>
+    <p>
+      <button (click)="changeState()">change state</button>
+      <button (click)="changeFavorite()">change favorite</button>
+      <button (click)="declineTask()">decline</button>
+    </p>
+</div>
+<div class="in_the_process" *ngIf="task.state == state.IN_THE_PROCESS">
+    <p>Id: {{task.id}} <span class="favorite" *ngIf="task.favorite"></span></p>
+    <p>Description: {{task.description}}</p>
+    <p>State: IN_THE_PROCESS</p>
+    <p>
+      <button (click)="changeState()">change state</button>
+      <button (click)="changeFavorite()">change favorite</button>
+      <button (click)="declineTask()">decline</button>
+    </p>
+</div>
+<div class="completed" *ngIf="task.state == state.COMPLETED">
+    <p>Id: {{task.id}} <span class="favorite" *ngIf="task.favorite"></span></p>
+    <p>Description: {{task.description}}</p>
+    <p>State: COMPLETED</p>
+    <p>
+      <button (click)="changeState()">change state</button>
+      <button (click)="changeFavorite()">change favorite</button>
+      <button (click)="declineTask()">decline</button>
+    </p>
+</div>
