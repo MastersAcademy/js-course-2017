@@ -7,7 +7,7 @@ module.exports = function () {
         const firsName = item.firstName;
         const url = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&generator=redirects&search=" + firsName + "_" + lastName;
 
-        request(url , {json: true}, (err, res, body) => { // ругулярка не працює походу
+        request(url , {json: true}, (err, res, body) => {
             if (err || res.statusCode !== 200) {
                 console.error(err || `code: ${res.statusCode}, message: ${res.statusMessage}`)
             }
