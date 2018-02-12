@@ -1,0 +1,14 @@
+li {
+  list-style: none;
+  margin: 0.1rem 1rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.active {
+  color: blue;
+}
