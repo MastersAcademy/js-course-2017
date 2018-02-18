@@ -1,6 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let data = require('../models/static-data');
+let getLaureateData = require('./../requests/laureateData');
 
 let fakeId = 12345677;
 
@@ -62,7 +63,6 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-
     let item = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -70,10 +70,15 @@ router.post('/', function (req, res) {
         id: ++fakeId
     };
 
-    data.push(item);
-
-    res.send(item);
-
+    getLaureateData(item).then(function(result) {
+        item.url = result[3][0];
+        item.info = result[2][0];
+        data.push(item);
+        res.status(200).send(item);
+    }).catch(function(error) {
+        console.log(error);
+        res.status(error.code).send(error);
+    });
 });
 
 router.put('/:id', function (req, res) {
