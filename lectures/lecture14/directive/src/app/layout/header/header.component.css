@@ -1,0 +1,12 @@
+:host {
+  margin: 0;
+}
+
+header {
+  display: flex;
+}
+
+h1, p {
+  margin: 0 1em;
+  line-height: 60px;
+}

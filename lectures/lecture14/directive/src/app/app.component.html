@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<form [formGroup]="colorsForm" (ngSubmit)="saveColors()">
+  <div formGroupName="prime">
+    <label class="form-item">
+      Prime Color
+      <input type="text" formControlName="color">
+    </label>
+
+    <label class="form-item">
+      Prime BG Color
+      <input type="text" formControlName="backgroundColor">
+    </label>
+  </div>
+
+  <div formGroupName="accent">
+    <label class="form-item">
+      Accent Color
+      <input type="text" formControlName="color">
+    </label>
+
+  </div>
+
+  <button type="submit">Save colors</button>
+</form>
