@@ -171,7 +171,7 @@
         removeItem : function () {
             $.ajax({
                 type : 'delete',
-                url : '/items/' + this.model.id
+                url : '/items/' + this.model._id
             })
                 .done(() => {
                     this.$el.remove();
@@ -221,14 +221,14 @@
                 bornCountry : this.tpl.bornCountryEl.val()
             };
 
-            if(this.model.id >= 0){
-                data.id = this.model.id
+            if(this.model._id >= 0){
+                data._id = this.model._id
             }
 
             $.ajax({
                 type : this.type == 'edit' ? 'put' : 'post',
                 data : data,
-                url : '/items' + (this.type == 'edit' ? '/' + this.model.id : '')
+                url : '/items' + (this.type == 'edit' ? '/' + this.model._id : '')
             })
 
                 .done((item) => {

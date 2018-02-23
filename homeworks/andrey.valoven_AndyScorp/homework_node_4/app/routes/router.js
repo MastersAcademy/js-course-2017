@@ -61,7 +61,7 @@ router.get('/', function (req, res) {
         res.json(result);
     });
 
-    
+
 });
 
 router.post('/', function (req, res) {
@@ -74,12 +74,14 @@ router.post('/', function (req, res) {
     getLaureateData(item).then(function(result) {
         addItemDB(item.firstName, item.lastName, item.bornCountry, result[2][0],result[3][0]).save()
             .then(result => {
-                console.log(result);
-                res.status(200).send(result);
+                res.status(201).send(result);
             }).catch(error => {
                 console.log(error);
+                res.status(500).send({
+                    err: error
+                });
             })
-        
+
     }).catch(function(error) {
         console.log(error);
         res.status(error.code).send(error);
@@ -91,29 +93,43 @@ router.put('/:id', function (req, res) {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         bornCountry: req.body.bornCountry
-    });
-    Laureate.findOne({ _id: req.params.id }).exec((err, result) =>{
-        if(!err) {
-            res.send(result);
-        } else {
-            res.code(501);
-        }
     })
-    
+        .exec()
+        .then(() => {
+            Laureate.findOne({_id: req.params.id})
+                .exec()
+                .then(result => {
+                    res.status(200).send(result);
+                })
+                .catch(error => {
+                    console.log(error);
+                    res.status(501).send({
+                        err: error
+                    });
+                })
 
+        })
+        .catch(error => {
+            console.log(error);
+            res.status(501).send({
+                err: error
+            });
+        });
 });
 
 router.delete('/:id', function (req, res) {
-    Laureate.remove({ _id: req.params.id}, err => {
-        if(err) {
-            res.send({ status: 'ok'}).code(200);
-        } else {
-            res.send({ status: err}).code(500)
-        }
-    })
-
-    res.send({ status: 'ok' });
-
+    let id = req.params.id;
+    Laureate.remove({ _id: id})
+        .exec()
+        .then(result => {
+            res.status(200).send(result);
+        })
+        .catch(error => {
+            console.log(error);
+            res.status(500).send({
+                err: error
+            });
+        });
 });
 
 module.exports = router;
