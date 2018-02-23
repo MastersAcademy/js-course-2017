@@ -74,6 +74,22 @@ router.get('/', function (req, res) {
 
 });
 
+const request = require('request');
+
+let wiki = data.forEach(function(item){
+let name =  item.firstName + ' '+ item.lastName;   
+request('https://en.wikipedia.org/w/api.php?action=opensearch&generator=redirects&format=json&search=' + name,
+{json: true}, (err, res, body) => {
+    if (err ||  res.statusCode !== 200){
+        return console.log(err);
+    }
+    item.info = body[2];
+    item.url = body[3];
+    console.log(data);
+}
+);      
+});
+
 router.post('/', function (req, res) {
 
     let item = {
