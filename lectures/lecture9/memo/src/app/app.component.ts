@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Game } from './models/game';
 import { Card, State } from './cardInterface';
@@ -8,7 +8,7 @@ import { Card, State } from './cardInterface';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   game: Game;
   cards: Array<Card>;
 
@@ -16,6 +16,14 @@ export class AppComponent {
     this.init();
 
     console.log(this.game);
+
+    const a = new Clock();
+    a.time = 'dfdf';
+
+  }
+
+  ngOnInit() {
+    console.log('dfdf');
   }
 
   flipCard(card: Card) {
@@ -32,6 +40,10 @@ export class AppComponent {
       card.state = State.CLOSED;
       return;
     }
+  }
+
+  handler(e) {
+    console.log(e);
   }
 
   private init() {

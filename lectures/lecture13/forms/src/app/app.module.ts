@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
-import { CardModule } from './card/card.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CardModule } from './card/card.module';
   ],
   imports: [
     BrowserModule,
-    CardModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

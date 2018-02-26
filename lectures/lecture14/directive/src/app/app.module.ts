@@ -2,18 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CardModule } from './card/card.module';
+import { HeaderModule } from './layout';
+import { StylingService } from './services';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    CardModule
+    FormsModule,
+    ReactiveFormsModule,
+    HeaderModule
   ],
-  providers: [],
+  providers: [StylingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
