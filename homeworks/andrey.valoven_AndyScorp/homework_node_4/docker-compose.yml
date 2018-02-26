@@ -1,0 +1,10 @@
+version: '2'
+services:
+ db:
+  container_name: mongodb_node
+  image: 'mongo:3.6'
+  ports:
+   - '27017:27017'
+  volumes: 
+   - '/home/andrey/Web/js-course-2017/homeworks/andrey.valoven_AndyScorp/homework_node_4/data:/data/db'
+   
