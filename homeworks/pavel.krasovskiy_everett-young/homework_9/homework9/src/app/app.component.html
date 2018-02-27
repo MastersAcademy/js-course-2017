@@ -1,0 +1,12 @@
+
+<header id="addForm" class="header" >
+  <h2>First To Do List</h2>
+</header>
+<ul >
+  <app-todolist
+    *ngFor="let tsk of Tasks let i = index"
+    [task]="tsk"
+    [indexInArray] ="i"
+    (action) = "handleAction($event)">
+  </app-todolist>
+</ul>

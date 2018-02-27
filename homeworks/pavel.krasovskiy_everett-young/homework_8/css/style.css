@@ -1,0 +1,55 @@
+body {
+  font-family: "Open Sans", arial, sans-serif;
+  background: url("../images/main.jpg") no-repeat center fixed;
+  margin: 0 px;
+}
+
+.wraper {
+  width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, .5) url("../images/box.png");
+}
+
+.box-sound {
+  padding: 25px;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.box-sound button {
+  color: rgb(255, 255, 255);
+  font-family: "AA-Haymaker", arial, sans-serif;
+  font-size: 60px;
+  width: 170px;
+  margin: 20px;
+  text-shadow: 0 px -1px 0 px rgba(30, 30, 30, .8);
+  background: rgb(255, 209, 48);
+  background: linear-gradient(43deg, rgb(255, 209, 48) 30%, rgb(76, 23, 255) 100%);
+  background: linear-gradient(313deg, rgb(255, 209, 48) 30%, rgb(76, 23, 255) 100%);
+}
+
+.box-sound button:active,.presKey {
+  font-family: "AA-Haymaker", arial, sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  width: 170px;
+  margin: 20px;
+  text-shadow: 0 px -1 px 0 px rgba(30, 30, 30, .8) !important;
+  background: rgb(255, 94, 0) !important;
+  background: linear-gradient(352deg, rgb(255, 94, 0) 30%, rgb(76, 23, 255) 100%) !important;
+  background: linear-gradient(262deg, rgb(255, 94, 0) 30%, rgb(76, 23, 255) 100%) !important;
+  -webkit-box-shadow: 0 px 3px 30px rgba(142, 0, 255, 1) !important;
+  -moz-box-shadow: 0 px 3px 30px rgba(142, 0, 255, 1) !important;
+  box-shadow: 0 px 3px 30px rgba(142, 0, 255, 1) !important;
+}
+
+.box-sound button span {
+  font-family: "AA-Haymaker", arial, sans-serif;
+  font-size: 14px;
+  float: left;
+}
+
+@font-face {
+  font-family: AA-Haymaker;
+  src: url("../fonts/AA-Haymaker.ttf");
+}

@@ -1,0 +1,17 @@
+<li [ngClass]="{
+  'completed': task.state == 0,
+  'inProcess': task.state == 1,
+  'waiting': task.state == 2,
+  'declined': task.state == 3}" (click) = "changeState()">
+  <p >{{task.id}}. {{task.description}}</p>
+  <button
+    (click) = "declined($event)"
+    class="waves-effect waves-light btn"
+    [ngClass] = "{'close': task.state == 3}">
+    DECLINED
+  </button>
+  <button [ngClass]="{'star-five':true,'starAdd':task.favorite}" (click)="changeFavorite($event)">
+    ★
+  </button>
+
+</li>
