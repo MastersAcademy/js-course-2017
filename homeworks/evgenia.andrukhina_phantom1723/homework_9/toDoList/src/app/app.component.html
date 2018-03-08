@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let listItem of listItems">
+        <app-list [listItem]="listItem" (action)="handleAction($event)"></app-list>
+    </li>
+</ul>

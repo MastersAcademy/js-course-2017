@@ -1,0 +1,7 @@
+<div [ngClass]="addClass(listItem)">{{listItem.task}}
+    <button (click)="changeState(listItem)">Change State</button>
+    <button (click)="deleteItem(listItem)">x</button>
+    <button (click)="changeFavorite(listItem)" [ngClass]="{'favorite' : listItem.favorite === true}">&hearts;</button>
+</div>
+
+
