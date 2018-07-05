@@ -1,0 +1,3 @@
+<div *ngFor="let task of tasks">
+  <task [task]="task" (click)="taskClick(task)"></task>
+</div>

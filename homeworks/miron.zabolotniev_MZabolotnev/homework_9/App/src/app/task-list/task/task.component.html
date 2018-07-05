@@ -1,0 +1,19 @@
+<div *ngIf="task.state !== 3" class="container">
+  <div class="column1">
+    <div>id</div>
+    <div>state</div>
+    <div>favorite</div>
+    <div>duedate</div>
+  </div>
+  <div class="column">
+    <div>{{task.id}}</div>
+    <div [ngSwitch]="task.state">
+      <div class="completed" *ngSwitchCase="0">COMPLETED</div>
+      <div class="process" *ngSwitchCase="1">PROCESS</div>
+      <div class="waiting" *ngSwitchCase="2">WAITING</div>
+      <div class="declined" *ngSwitchCase="3">DECLINED</div>
+    </div>
+    <div>{{task.favorite}}</div>
+    <div>{{task.dueDate}}</div>
+  </div>
+</div>

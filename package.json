@@ -32,5 +32,8 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
     "stylelint": "^8.2.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.6.5"
   }
 }
