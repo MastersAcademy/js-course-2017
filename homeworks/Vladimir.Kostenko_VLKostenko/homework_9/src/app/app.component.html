@@ -1,0 +1,8 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Daily Todo List</a>
+  </div>
+ </nav>
+<app-list-forms (addTask)="onAdd($event)"></app-list-forms>  
+<app-list-status (deleteTask)="onDelete($event)" [list]="c" *ngFor="let c of list"></app-list-status>
+

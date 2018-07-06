@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Drum machine</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<link rel="stylesheet" href="css/main.min.css">
+	
+</head>
+
+<body>
+
+	<header class="header_main" style="background-image: url(img/bg-image2.jpg);">
+		<div class="header_main_wrapper">
+			<div class="wrapper_item__first">
+				<div class="header_main__dram-1">
+					<button class="button button_first" data-key="87" onclick="mousePlay()">W
+						<audio id="dram-1" data-key="87" src="sounds/boom.wav"></audio>
+					</button>
+				</div>
+				<div class="header_main__dram-2">
+					<button class="button button_first" data-key="69" onclick="mousePlay()">E
+						<audio id="dram-2" data-key="69" src="sounds/clap.wav"></audio>	
+					</button>
+				</div>
+				<div class="header_main__dram-3">
+					<button class="button button_first" data-key="82" onclick="mousePlay()">R
+						<audio id="dram-3" data-key="82" src="sounds/hihat.wav"></audio>	
+					</button>
+				</div>
+			</div>
+			<div class="wrapper_item__second">
+				<div class="header_main__dram-4">
+					<button class="button button_first" data-key="83" onclick="mousePlay()">S
+						<audio id="dram-4" data-key="83" src="sounds/kick.wav"></audio>	
+					</button>
+				</div>
+				<div class="header_main__dram-5">
+					<button class="button button_first" data-key="68" onclick="mousePlay()">D
+						<audio id="dram-5" data-key="68" src="sounds/openhat.wav"></audio>	
+					</button>
+				</div>
+				<div class="header_main__dram-6">
+					<button class="button button_first" data-key="70" onclick="mousePlay()">F
+						<audio id="dram-6" data-key="70" src="sounds/ride.wav"></audio>	
+					</button>
+				</div>
+			</div>
+			<div class="wrapper_item__third">
+				<div class="header_main__dram-7">
+					<button class="button button_first" data-key="88" onclick="mousePlay()">X
+						<audio id="dram-7" data-key="88" src="sounds/snare.wav"></audio>
+					</button>
+				</div>
+				<div class="header_main__dram-8">
+					<button class="button button_first" data-key="67" onclick="mousePlay()">C
+						<audio id="dram-8" data-key="67" src="sounds/tink.wav"></audio>
+					</button>
+				</div>
+				<div class="header_main__dram-9">
+					<button class="button button_first" data-key="86" onclick="mousePlay()">V
+						<audio id="dram-9" data-key="86" src="sounds/tom.wav"></audio>
+					</button>
+				</div>
+			</div>										
+		</div>
+	</header>
+	
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
