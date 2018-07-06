@@ -1,0 +1,39 @@
+body {
+  padding: 5%;
+  background: url("img/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  padding-top: 2%;
+  width: 55vw;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  background: #002535;
+  border-radius: 5%;
+  flex-wrap: wrap;
+  height: 60vh;
+}
+
+.items {
+  background: #4396ca;
+  color: rgb(255, 255, 255);
+  border: 0.2vw solid rgb(0, 0, 0);
+  width: 8vw;
+  height: 16vh;
+  border-radius: 10%;
+  font-size: 2vw;
+}
+
+.items-active {
+  border: 0.2vw groove #df1c3a;
+  color: #df1c3a;
+}
+
+.line-break {
+  width: 100%;
+}
