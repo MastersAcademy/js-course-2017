@@ -1,0 +1,16 @@
+html {
+  font-size: 14px;
+}
+
+.container {
+max-width: 350px;
+}
+
+.btn {
+  min-height: 100px;
+  min-width: 100px;
+  margin-bottom: 5px;
+}
+
+
+
